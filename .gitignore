@@ -1,0 +1,5 @@
+.next/
+node_modules/
+.surge-deploy/
+infin8growth-preview.html
+*.DS_Store
