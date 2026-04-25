@@ -3,3 +3,13 @@ node_modules/
 .surge-deploy/
 infin8growth-preview.html
 *.DS_Store
+
+# Separate projects
+Landing Pages/
+
+# Internal docs
+brand/
+*.docx
+
+# Utility scripts
+create-brand-call-brief.js
