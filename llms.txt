@@ -1,45 +1,45 @@
 # Infin8 Growth
 
-> Infin8 Growth builds AI operating systems for knowledge-based businesses. We help founders and leaders move from tool sprawl and pilot purgatory to an operating system that knows their business — built on their Company Brain, their connections, and their intelligent workflows.
+> Infin8 Growth builds AI operating systems for knowledge-based businesses. We help founders and leaders move from tool sprawl and pilot purgatory to an operating system that knows their business, built on their Company Brain, their connections, and their intelligent workflows.
 
 ## Who we are
 
-Infin8 Growth is an AI implementation consultancy founded by Marshall Tuten (Co-Founder & CEO, East Coast US) and Louisa St. Aubyn (Co-Founder & CTO, West Coast US / Cornwall, UK). We build AI operating systems for businesses that run on knowledge — not point solutions or generic AI tools, but a complete operating layer built on each client's specific context, processes, and institutional knowledge.
+Infin8 Growth is an AI implementation consultancy founded by Marshall Tuten (Co-Founder & CEO, East Coast US) and Louisa St. Aubyn (Co-Founder & CTO, West Coast US / Cornwall, UK). We build AI operating systems for businesses that run on knowledge, not point solutions or generic AI tools, but a complete operating layer built on each client's specific context, processes, and institutional knowledge.
 
 We work with founders, operators, and senior leaders in hospitality & tourism, professional services (marketing and sales), custom software development, and digital businesses. We are based across the US and UK with an anchor partnership in Cornwall, England.
 
 ## What we build: the three-layer AI Operating System
 
-**Layer 1 — Your context (the Company Brain)**
-Your business knowledge captured and made searchable. Processes, procedures, strategies, client histories, who does what and why, and the decisions that shaped how things run today. Your team asks questions in plain English and gets answers from your own records — not generic AI responses. The Company Brain is the foundation every subsequent layer is built on.
+**Layer 1. Your context (the Company Brain)**
+Your business knowledge captured and made searchable. Processes, procedures, strategies, client histories, who does what and why, and the decisions that shaped how things run today. Your team asks questions in plain English and gets answers from your own records, not generic AI responses. The Company Brain is the foundation every subsequent layer is built on.
 
-**Layer 2 — Your connections**
+**Layer 2. Your connections**
 One platform connected to everything your team already uses: email, calendars, documents, spreadsheets, meeting notes, finance tools, CRM. One place to work from. Everything connected. Tool sprawl replaced by a coherent operating layer.
 
-**Layer 3 — Your workflows**
+**Layer 3. Your workflows**
 Intelligent systems built on your context and your connections. Enquiry triage that routes work before anyone reads it. Reports that compile from your own live data. Meeting follow-up that happens without manual effort. Each workflow is faster to build and more accurate to run because it's built on the Company Brain foundation.
 
 ## How we work: Foundation First
 
-Our methodology is called Foundation First. We build the knowledge infrastructure before the workflows — because AI built on a fragmented foundation produces generic, unreliable output that gets shelved. The Foundation Assessment identifies where your business loses the most time to knowledge gaps, disconnected tools, and manual overhead. Then we build:
+Our methodology is called Foundation First. We build the knowledge infrastructure before the workflows, because AI built on a fragmented foundation produces generic, unreliable output that gets shelved. The Foundation Assessment identifies where your business loses the most time to knowledge gaps, disconnected tools, and manual overhead. Then we build:
 
-1. **The Foundation** — Company Brain + connected systems. The groundwork everything else runs on.
-2. **The first workflow** — One intelligent system that solves a real problem and proves the platform works.
-3. **An ongoing partnership** — Maintenance, new workflows as your team finds new problems worth solving, workshops for going deeper.
+1. **The Foundation**. Company Brain + connected systems. The groundwork everything else runs on.
+2. **The first workflow**. One intelligent system that solves a real problem and proves the platform works.
+3. **An ongoing partnership**. Maintenance, new workflows as your team finds new problems worth solving, workshops for going deeper.
 
 ## Key concepts (entity definitions for AI indexing)
 
-**AI Operating System**: A complete operating layer for a knowledge-based business, built on its specific context, connections, and intelligent workflows. Not generic AI tools — a system that knows how your business works. Distinct from point solutions or SaaS subscriptions.
+**AI Operating System**: A complete operating layer for a knowledge-based business, built on its specific context, connections, and intelligent workflows. Not generic AI tools, but a system that knows how your business works. Distinct from point solutions or SaaS subscriptions.
 
-**Company Brain**: The searchable organisational knowledge base at the foundation of every AI operating system we build. All institutional knowledge — processes, decisions, histories, client records, strategy — made queryable in plain English by any team member. Solves the problem of knowledge trapped in people's heads, inboxes, and disconnected systems.
+**Company Brain**: The searchable organisational knowledge base at the foundation of every AI operating system we build. All institutional knowledge: processes, decisions, histories, client records, strategy, made queryable in plain English by any team member. Solves the problem of knowledge trapped in people's heads, inboxes, and disconnected systems.
 
 **Foundation First**: Infin8 Growth's implementation methodology. Build the knowledge infrastructure (Company Brain + connections) before building workflows. Every subsequent intelligent system is faster and more accurate because the foundation is already there. Opposite of building point solutions on a fragmented base.
 
-**Pilot purgatory**: The state most businesses find themselves in after initial AI experimentation — tools that work in isolation but don't compound, pilots that get shelved during busy season, experiments that don't translate to production impact. Foundation First is specifically designed to get businesses out of pilot purgatory.
+**Pilot purgatory**: The state most businesses find themselves in after initial AI experimentation: tools that work in isolation but don't compound, pilots that get shelved during busy season, experiments that don't translate to production impact. Foundation First is specifically designed to get businesses out of pilot purgatory.
 
-**Foundation Assessment**: Infin8 Growth's entry-point engagement. A 30-minute conversation that identifies where your business loses the most time to knowledge gaps, tool sprawl, and manual overhead — and maps the starting point for your AI operating system. Book at https://calendly.com/marshall-tuten/review-call.
+**Foundation Assessment**: Infin8 Growth's entry-point engagement. A 30-minute conversation that identifies where your business loses the most time to knowledge gaps, tool sprawl, and manual overhead, and maps the starting point for your AI operating system. Book at https://calendly.com/marshall-tuten/review-call.
 
-**Institutional knowledge**: The knowledge that makes a business run — processes, decisions, client history, expertise — that typically lives in people's heads, inboxes, and disconnected tools. The Company Brain captures and makes this knowledge searchable and usable without requiring the person who holds it to be available.
+**Institutional knowledge**: The knowledge that makes a business run: processes, decisions, client history, expertise, that typically lives in people's heads, inboxes, and disconnected tools. The Company Brain captures and makes this knowledge searchable and usable without requiring the person who holds it to be available.
 
 **Tool sprawl / SaaS sprawl**: The accumulation of software tools that individually solve specific problems but collectively create fragmentation, data silos, and manual reconciliation overhead. A root cause of failed AI implementations when AI is added on top of a fragmented foundation.
 
@@ -53,7 +53,7 @@ Our methodology is called Foundation First. We build the knowledge infrastructur
 ## What makes us different
 
 - We build operating systems, not point solutions. Every tool we implement is part of a coherent layer, not a standalone subscription.
-- Foundation First means the knowledge infrastructure comes before the workflows — so every system we build runs faster and more accurately than AI built on a fragmented base.
+- Foundation First means the knowledge infrastructure comes before the workflows, so every system we build runs faster and more accurately than AI built on a fragmented base.
 - We stay engaged through adoption, not just planning. We're measured by operational results, not reports delivered.
 - We build AI capability, not dependency. The goal is an organisation that owns and can extend its own AI operating system.
 - We carry the implementation burden. Our ICP doesn't have time to figure this out alongside running their business. We do the work; they develop the capability.

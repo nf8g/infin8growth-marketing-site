@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing. Infin8 Growth · AI Operating Systems · Foundation First</title>
+<meta name="description" content="Pricing for Infin8 Growth's AI Operating System: Foundation Install plus Sustain, Train, and Partner expansion lanes.">
+<!-- Open Graph -->
+<meta property="og:title" content="Pricing. Infin8 Growth">
+<meta property="og:description" content="Pricing for Infin8 Growth's AI Operating System: Foundation Install plus Sustain, Train, and Partner expansion lanes.">
+<meta property="og:image" content="/assets/og/about.png">
+<meta property="og:url" content="https://infin8growth.ai/pricing">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://infin8growth.ai/pricing">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YTS35YGLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8YTS35YGLZ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/upgrades.css">
+<style>
+  /* ── PRICING PAGE ─────────────────────────────────── */
+  .pricing-hero { padding-top: 140px; padding-bottom: 48px; }
+  .pricing-hero h1 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(44px, 6.4vw, 88px);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    margin: 16px 0 24px;
+    max-width: 960px;
+  }
+  .pricing-hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .pricing-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.45;
+    color: var(--navy);
+    max-width: 760px;
+    margin: 0;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .pricing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 32px;
+    border: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+    border-radius: 2px;
+    background: #ffffff;
+    min-height: 520px;
+  }
+  .pricing-card .tier-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold, #a88242);
+    margin: 0 0 20px;
+  }
+  .pricing-card h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    color: var(--navy);
+  }
+  .pricing-card h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .pricing-card .tier-summary {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--navy);
+    opacity: 0.85;
+    margin: 0 0 28px;
+  }
+  .pricing-card .tier-price {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin: 0 0 8px;
+  }
+  .pricing-card .tier-price .tier-price-amount {
+    display: block;
+    font-family: var(--serif);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .pricing-card .tier-price-note {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--navy);
+    opacity: 0.6;
+    margin: 0 0 28px;
+  }
+  .pricing-card hr.rule {
+    border: 0;
+    border-top: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+    margin: 0 0 24px;
+  }
+  .pricing-card .tier-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--navy);
+  }
+  .pricing-card .tier-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(10, 35, 66, 0.12);
+  }
+  .pricing-card .tier-list li:last-child { border-bottom: 0; }
+  .pricing-card .tier-cta { margin-top: auto; }
+  .pricing-card .tier-cta a {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--navy);
+    padding-bottom: 4px;
+    transition: color 180ms ease, border-color 180ms ease;
+  }
+  .pricing-card .tier-cta a:hover { color: var(--gold); border-color: var(--gold); }
+
+  .pricing-card--featured {
+    background: var(--navy, #0a2342);
+    border-color: var(--navy, #0a2342);
+  }
+  .pricing-card--featured .tier-eyebrow { color: var(--gold); }
+  .pricing-card--featured h3,
+  .pricing-card--featured .tier-summary,
+  .pricing-card--featured .tier-price,
+  .pricing-card--featured .tier-price-note,
+  .pricing-card--featured .tier-list { color: var(--light-text, #e8e4dc); }
+  .pricing-card--featured .tier-summary { opacity: 0.9; }
+  .pricing-card--featured hr.rule { border-top-color: rgba(232, 228, 220, 0.18); }
+  .pricing-card--featured .tier-list li { border-bottom-color: rgba(232, 228, 220, 0.14); }
+  .pricing-card--featured .tier-cta a {
+    color: var(--light-text);
+    border-bottom-color: var(--light-text);
+  }
+  .pricing-card--featured .tier-cta a:hover { color: var(--gold); border-color: var(--gold); }
+
+  .pricing-footnote {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--navy);
+    opacity: 0.75;
+    max-width: 720px;
+  }
+
+  /* ── FOUNDATION HERO (full-width) ─────────────────── */
+  .foundation-hero {
+    margin-top: 24px;
+    padding: 56px 64px;
+    border: 1px solid var(--navy, #0a2342);
+    border-radius: 2px;
+    background: var(--navy, #0a2342);
+    color: var(--light-text, #e8e4dc);
+    display: grid;
+    grid-template-columns: minmax(320px, 0.85fr) 1.4fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .foundation-hero .fh-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold, #e6a93a);
+    margin: 0 0 16px;
+  }
+  .foundation-hero h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(34px, 3.6vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--light-text);
+    margin: 0 0 18px;
+  }
+  .foundation-hero h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .foundation-hero .fh-summary {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--light-text);
+    opacity: 0.85;
+    margin: 0 0 32px;
+    max-width: 36ch;
+  }
+  .foundation-hero .fh-price {
+    font-family: var(--serif);
+    font-size: clamp(36px, 3.4vw, 46px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--light-text);
+    margin: 0 0 6px;
+  }
+  .foundation-hero .fh-price-note {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold, #e6a93a);
+    margin: 0 0 36px;
+  }
+  .foundation-hero .fh-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold, #e6a93a);
+    padding: 14px 22px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: filter 180ms ease;
+  }
+  .foundation-hero .fh-cta a:hover { filter: brightness(1.08); }
+  .foundation-hero .fh-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 19px;
+    line-height: 1.45;
+    color: var(--light-text);
+  }
+  .foundation-hero .fh-list li {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(232, 228, 220, 0.14);
+  }
+  .foundation-hero .fh-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .foundation-hero .fh-list li:first-child { padding-top: 0; }
+  .foundation-hero .fh-list .fh-num {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold, #e6a93a);
+    font-size: 19px;
+    line-height: 1.45;
+  }
+
+  /* ── EXPANSION GRID (3 up, click to expand) ──────── */
+  .expansion-section { margin-top: 88px; }
+  .expansion-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+  }
+  .expansion-head h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(28px, 3vw, 40px);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--navy);
+  }
+  .expansion-head h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .expansion-head .expansion-hint {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.55;
+    margin: 0;
+  }
+  .expansion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .expansion-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+    border-radius: 2px;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    transition: border-color 180ms ease, background 180ms ease;
+  }
+  .expansion-card:hover { border-color: var(--gold, #e6a93a); }
+  .expansion-card.is-open { border-color: var(--navy, #0a2342); }
+  .expansion-card .ec-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold, #a88242);
+    margin: 0 0 14px;
+  }
+  .expansion-card .ec-name {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    color: var(--navy);
+  }
+  .expansion-card .ec-name em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .expansion-card .ec-summary {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--navy);
+    opacity: 0.78;
+    margin: 0;
+  }
+  .expansion-card .ec-toggle {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .expansion-card .ec-toggle .ec-toggle-icon {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    transition: transform 220ms ease;
+  }
+  .expansion-card.is-open .ec-toggle-icon { transform: rotate(45deg); }
+  .expansion-card .ec-details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 320ms ease;
+  }
+  .expansion-card.is-open .ec-details { grid-template-rows: 1fr; }
+  .expansion-card .ec-details > div {
+    overflow: hidden;
+    min-height: 0;
+  }
+  .expansion-card .ec-details-inner {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+  }
+  .expansion-card .ec-price {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--navy);
+    margin: 0 0 4px;
+  }
+  .expansion-card .ec-price-note {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.55;
+    margin: 0 0 20px;
+  }
+  .expansion-card .ec-partner-note {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--navy);
+    margin: 0 0 20px;
+    max-width: 52ch;
+  }
+  .expansion-card .ec-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--navy);
+  }
+  .expansion-card .ec-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(10, 35, 66, 0.12);
+  }
+  .expansion-card .ec-list li:last-child { border-bottom: 0; }
+  .expansion-card .ec-cta a {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--navy);
+    padding-bottom: 4px;
+    transition: color 180ms ease, border-color 180ms ease;
+  }
+  .expansion-card .ec-cta a:hover { color: var(--gold); border-color: var(--gold); }
+
+  @media (max-width: 1100px) {
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .pricing-card { min-height: 0; }
+    .foundation-hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 40px; }
+    .expansion-grid { grid-template-columns: 1fr; }
+    .expansion-head { display: block; }
+    .expansion-head h2 { margin: 0 0 14px; }
+    .expansion-head .expansion-hint { display: block; margin: 0; }
+  }
+  @media (max-width: 640px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+    .foundation-hero { padding: 40px 28px; }
+    .expansion-card { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="top">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="index.html#field-notes">Field Notes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="about.html" onclick="closeDrawer()">About</a></li>
+    <li><a href="work.html" onclick="closeDrawer()">Work</a></li>
+    <li><a href="pricing.html" onclick="closeDrawer()">Pricing</a></li>
+    <li><a href="index.html#field-notes" onclick="closeDrawer()">Field Notes</a></li>
+    <li><a href="blog.html" onclick="closeDrawer()">Blog</a></li>
+    <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
+  </ul>
+  <div class="drawer-cta">
+    <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+  </div>
+</nav>
+
+<!-- ============ PRICING HERO ============ -->
+<section class="cream pricing-hero">
+  <div class="container">
+    <span class="eyebrow">Pricing</span>
+    <h1>Clear <em>numbers</em> for the work ahead.</h1>
+    <p class="lede">One Foundation Install, three expansion lanes. Pick the shape that fits. <em>Details coming soon.</em></p>
+  </div>
+</section>
+
+<!-- ============ PRICING TIERS ============ -->
+<section class="cream" style="padding-top: 0;">
+  <div class="container">
+
+    <!-- 01 Foundation Install — full width hero -->
+    <article class="foundation-hero" id="foundationHero">
+      <div class="fh-left">
+        <p class="fh-eyebrow">01 · Foundation</p>
+        <h2>Foundation <em>Install</em></h2>
+        <p class="fh-summary">Your AI Operating System, installed in two weeks. One fixed price. Your team uses it on day one.</p>
+        <p class="fh-price">$5,300</p>
+        <p class="fh-price-note">One-time · fixed</p>
+        <div class="fh-cta">
+          <a href="https://calendly.com/marshall-tuten/review-call">Start here <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="fh-right">
+        <ul class="fh-list">
+          <li><span class="fh-num">01</span><span>Native tools and connections, built in</span></li>
+          <li><span class="fh-num">02</span><span>3 production-ready workflows tailored to your operation</span></li>
+          <li><span class="fh-num">03</span><span>Context Folder — files and docs attached to your centralized Cowork project</span></li>
+          <li><span class="fh-num">04</span><span>Onboarding setup and live training session</span></li>
+          <li><span class="fh-num">05</span><span>Company-wide custom AI use policy</span></li>
+          <li><span class="fh-num">06</span><span>Anthropic Platform Access guide</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- OS Expansion lanes -->
+    <div class="expansion-section">
+      <div class="expansion-head">
+        <h2>OS <em>Expansion</em></h2>
+        <p class="expansion-hint">Click a lane to see details</p>
+      </div>
+
+      <div class="expansion-grid">
+
+        <!-- Sustain -->
+        <button class="expansion-card" type="button" aria-expanded="false" data-tier="sustain">
+          <p class="ec-eyebrow">02 · Sustain</p>
+          <h3 class="ec-name"><em>Sustain</em></h3>
+          <p class="ec-summary">We run your OS while you use it.</p>
+          <span class="ec-toggle">Details <span class="ec-toggle-icon" aria-hidden="true">+</span></span>
+          <div class="ec-details"><div><div class="ec-details-inner">
+            <p class="ec-price">$1,200</p>
+            <p class="ec-price-note">Per month</p>
+            <ul class="ec-list">
+              <li>2 monthly training sessions</li>
+              <li>1 monthly production-ready skill or tool to compound stronger</li>
+              <li>Access to individual consulting call booking</li>
+            </ul>
+            <div class="ec-cta">
+              <a href="https://calendly.com/marshall-tuten/review-call">Talk to us →</a>
+            </div>
+          </div></div></div>
+        </button>
+
+        <!-- Train -->
+        <button class="expansion-card" type="button" aria-expanded="false" data-tier="train">
+          <p class="ec-eyebrow">03 · Train</p>
+          <h3 class="ec-name"><em>Train</em></h3>
+          <p class="ec-summary">We train your team to run it themselves.</p>
+          <span class="ec-toggle">Details <span class="ec-toggle-icon" aria-hidden="true">+</span></span>
+          <div class="ec-details"><div><div class="ec-details-inner">
+            <p class="ec-price">$2,300</p>
+            <p class="ec-price-note">Per month</p>
+            <ul class="ec-list">
+              <li>Weekly training sessions</li>
+              <li>2 monthly production-ready skills or tools to compound stronger</li>
+            </ul>
+            <div class="ec-cta">
+              <a href="https://calendly.com/marshall-tuten/review-call">Talk to us →</a>
+            </div>
+          </div></div></div>
+        </button>
+
+        <!-- Partner -->
+        <button class="expansion-card" type="button" aria-expanded="false" data-tier="partner">
+          <p class="ec-eyebrow">04 · Partner</p>
+          <h3 class="ec-name"><em>Partner</em></h3>
+          <p class="ec-summary">We become the AI team you'd otherwise have to hire.</p>
+          <span class="ec-toggle">Details <span class="ec-toggle-icon" aria-hidden="true">+</span></span>
+          <div class="ec-details"><div><div class="ec-details-inner">
+            <p class="ec-price">Limited engagement</p>
+            <p class="ec-price-note">Custom scope · custom pricing</p>
+            <p class="ec-partner-note">Infin8 Growth takes partnership very seriously and we give it our all. With the right fit, this includes everything from custom software development to sharing proprietary data, skills, workflows, and strategy.</p>
+            <div class="ec-cta">
+              <a href="https://calendly.com/marshall-tuten/review-call">Talk to us →</a>
+            </div>
+          </div></div></div>
+        </button>
+
+      </div>
+    </div>
+
+    <p class="pricing-footnote">Not sure which lane fits? Start with a <a href="https://calendly.com/marshall-tuten/review-call" class="fn-link"><em>Foundation Assessment</em></a> and we'll tell you where you actually stand before spending a dollar.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <a href="index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="bottom">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#field-notes">Field Notes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@MarshallTuten8" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/company/infin8growth" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/infin8growth" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <span class="meta">CORNWALL · LONDON · EAST COAST · WEST COAST</span>
+    <span class="meta" style="margin-top: 8px;"><a href="/privacy.html" style="color: inherit; opacity: 0.6; text-decoration: none;">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('navDrawer');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    drawer.classList.toggle('open');
+    document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+  });
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Expansion cards: click to toggle (one open at a time)
+  (function(){
+    var cards = document.querySelectorAll('.expansion-card');
+    cards.forEach(function(card){
+      card.addEventListener('click', function(e){
+        // don't toggle when clicking the inner CTA link
+        if (e.target.closest('a')) return;
+        var isOpen = card.classList.contains('is-open');
+        cards.forEach(function(c){ c.classList.remove('is-open'); c.setAttribute('aria-expanded','false'); });
+        if (!isOpen) {
+          card.classList.add('is-open');
+          card.setAttribute('aria-expanded','true');
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

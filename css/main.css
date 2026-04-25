@@ -692,7 +692,8 @@ nav.top a.active::after { transform: scaleX(1); }
 
 /* ── CONTACT ────────────────────────────────────────── */
 .contact .head { margin-bottom: 48px; }
-.contact h2 { color: #ffffff; max-width: 720px; }
+.navy.contact h2 { color: #ffffff; max-width: 720px; }
+.cream.contact h2 { color: var(--navy); max-width: 720px; }
 .contact h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .contact .emails {
   font-family: var(--serif);
@@ -864,6 +865,13 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
   margin: 0 0 24px;
 }
 .bio-card .bio-text { font-size: 16px; line-height: 1.7; color: var(--navy); margin-bottom: 24px; }
+.bio-card .bio-text .bio-pullquote {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--navy);
+  margin: 24px 0;
+}
 .bio-card .socials { display: flex; gap: 16px; flex-wrap: wrap; }
 .bio-card .socials a {
   font-size: 13px;

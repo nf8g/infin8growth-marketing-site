@@ -14,6 +14,7 @@
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
     { "source": "/work", "destination": "/work.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/blog/:slug", "destination": "/blog/:slug.html" }

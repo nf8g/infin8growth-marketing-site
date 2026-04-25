@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — Infin8 Growth · AI Operating Systems · Foundation First</title>
+<title>About. Infin8 Growth · AI Operating Systems · Foundation First</title>
 <meta name="description" content="Marshall Tuten and Louisa St. Aubyn built Infin8 Growth for the businesses AI consultants ignore: knowledge-heavy operations drowning in tool sprawl, institutional knowledge locked in people's heads, and no clear path from pilot to production.">
 <!-- Open Graph -->
-<meta property="og:title" content="About — Infin8 Growth">
+<meta property="og:title" content="About. Infin8 Growth">
 <meta property="og:description" content="Meet the team behind Infin8 Growth's AI operating systems. Marshall Tuten and Louisa St. Aubyn, building intelligent systems for businesses that run on knowledge.">
 <meta property="og:image" content="/assets/og/about.png">
 <meta property="og:url" content="https://infin8growth.ai/about">
@@ -30,7 +30,7 @@
       "@type": "Person",
       "@id": "https://infin8growth.ai/#marshall",
       "name": "Marshall Tuten",
-      "jobTitle": "Co-Founder & CEO",
+      "jobTitle": "Co-Founder — Client Partnerships & Strategy",
       "worksFor": { "@id": "https://infin8growth.ai/#org" },
       "url": "https://infin8growth.ai/about",
       "sameAs": [
@@ -42,9 +42,12 @@
       "@type": "Person",
       "@id": "https://infin8growth.ai/#louisa",
       "name": "Louisa St. Aubyn",
-      "jobTitle": "Co-Founder & CTO",
+      "jobTitle": "Co-Founder — AI Strategy & Architecture",
       "worksFor": { "@id": "https://infin8growth.ai/#org" },
-      "url": "https://infin8growth.ai/about"
+      "url": "https://infin8growth.ai/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/louisa-st-aubyn-375014259"
+      ]
     },
     {
       "@type": "Organization",
@@ -60,6 +63,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/upgrades.css">
+<style>
+  .ff-grid { position: relative; }
+  .ff-pricing-pill {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold, #e6a93a);
+    background: transparent;
+    border: 1px solid var(--gold, #e6a93a);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 180ms ease, color 180ms ease;
+  }
+  .ff-pricing-pill:hover {
+    background: var(--gold, #e6a93a);
+    color: var(--navy, #0a2342);
+  }
+</style>
 </head>
 <body>
 
@@ -71,6 +102,7 @@
       <ul>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
         <li><a href="index.html#field-notes">Field Notes</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -86,6 +118,7 @@
   <ul>
     <li><a href="about.html" onclick="closeDrawer()">About</a></li>
     <li><a href="work.html" onclick="closeDrawer()">Work</a></li>
+    <li><a href="pricing.html" onclick="closeDrawer()">Pricing</a></li>
     <li><a href="index.html#field-notes" onclick="closeDrawer()">Field Notes</a></li>
     <li><a href="blog.html" onclick="closeDrawer()">Blog</a></li>
     <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
@@ -101,7 +134,7 @@
     <span class="eyebrow">About</span>
     <h1>Built by people who've<br>run <em>real businesses</em></h1>
     <p style="font-family: var(--serif); font-size: clamp(20px, 1.8vw, 26px); line-height: 1.55; max-width: 680px; margin: 0;">
-      We came from operations, from sales, from building teams and running things that had to work under pressure every day. AI is one of the most powerful tools we've ever found for the problems we've always been solving. We aren't here to create pilot purgatory — we build AI operating systems that work and stay true to your vision without losing your soul.
+      We came from operations, from sales, from building teams and running things that had to work under pressure every day. AI is one of the most powerful tools we've ever found for the problems we've always been solving. We aren't here to create pilot purgatory. We build AI operating systems that work and stay true to your vision without losing your soul.
     </p>
   </div>
 </section>
@@ -114,20 +147,19 @@
       <!-- Marshall -->
       <div class="bio-card">
         <div class="photo">
-          <!-- Replace with: <img src="assets/marshall-tuten.jpg" alt="Marshall Tuten, Co-Founder of Infin8 Growth"> -->
-          <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Photo coming</span>
+          <img src="assets/marshall-tuten.jpg" alt="Marshall Tuten, Co-Founder of Infin8 Growth">
         </div>
         <p class="name">Marshall Tuten</p>
-        <p class="title">Co-Founder &amp; CEO</p>
+        <p class="title">Co-Founder — Client Partnerships &amp; Strategy</p>
         <div class="bio-text">
-          <p>Marshall has spent his career building systems that scale — from co-founding Infin8 Energy and building $100M+ in revenue across solar installation teams, to running heritage tourism operations that had to perform consistently at volume.</p>
-          <p>He leads The AI Collective in New Haven, a community focused on AI adoption and empowerment for business owners and entrepreneurs. His conviction: the biggest limitation in AI implementation is always the humans, not the technology. That's where the work starts.</p>
+          <p>Marshall has spent his career building systems and teams that scale, from $100M+ in revenue across solar installation teams to running international education &amp; growth initiatives, he builds operations that perform consistently at volume.</p>
+          <p>He leads the AI Collective in New Haven, a community building the human layer of the AI Era connecting with institutions, business owners, &amp; entrepreneurs.</p>
+          <p class="bio-pullquote"><em>“I knew from the minute AI started to become publicly available that I wanted to be a part of influencing it's development and use to be a positive impact on business and society. I love seeing the excitement and impact we create with the clients we serve. The biggest limitation on AI is us as humans. That's where the work starts.”</em></p>
           <p>Based on the East Coast. Reaches everywhere.</p>
         </div>
         <div class="socials">
           <a href="https://www.linkedin.com/in/marshalltuten" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.youtube.com/@MarshallTuten8" target="_blank" rel="noopener">YouTube</a>
-          <a href="mailto:marshall@infin8growth.ai">Email</a>
         </div>
       </div>
 
@@ -138,14 +170,14 @@
           <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;">Photo coming</span>
         </div>
         <p class="name">Louisa St. Aubyn</p>
-        <p class="title">Co-Founder &amp; CTO</p>
+        <p class="title">Co-Founder — AI Strategy &amp; Architecture</p>
         <div class="bio-text">
-          <p>[Louisa's bio — to be provided. Key themes: technical leadership, systems architecture, the Cornwall/heritage work, West Coast base, what she brings to the partnership.]</p>
-          <p>[Add 2–3 paragraphs covering background, expertise, and what makes her perspective distinct.]</p>
+          <p>British surf competitor turned AI architect, splitting time between the coasts of Cornwall and California. Louisa has built a portfolio of live systems across businesses in different industries.</p>
+          <p>She sets Infin8's AI strategy and wires frontier AI into how businesses actually run, designing how the AI operating system grows with the business. Her embedded work at St Michael's Mount in Cornwall is one of Infin8's live partner engagements.</p>
+          <p>Louisa is the reason Infin8's builds are architectural rather than ad hoc.</p>
         </div>
         <div class="socials">
-          <a href="mailto:louisa@infin8growth.ai">Email</a>
-          <!-- Add LinkedIn, etc. when available -->
+          <a href="https://www.linkedin.com/in/louisa-st-aubyn-375014259" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
 
@@ -163,7 +195,7 @@
         Every business we worked with had the same problem underneath different problems. The knowledge that made things run was trapped in people's heads, in inboxes, in processes nobody had time to document.
       </p>
       <p style="font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.5; color: var(--light-text); margin-bottom: 1em;">
-        AI changed what was possible. Not as a set of tools to bolt on — as a new operating layer. One that could actually hold and surface the knowledge that makes a business run, and connect it to the work that needs doing every day.
+        AI changed what was possible. Not as a set of tools to bolt on, but as a new operating layer. One that could actually hold and surface the knowledge that makes a business run, and connect it to the work that needs doing every day.
       </p>
       <p style="font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.5; color: var(--light-text);">
         <em>That's the gap we exist to close.</em>
@@ -172,48 +204,52 @@
   </div>
 </section>
 
-<!-- ============ THE FRAMEWORK ============ -->
-<section class="cream">
-  <div class="container">
-    <div class="section-head">
+<!-- ============ HOW IT WORKS ============ -->
+<section class="navy how" id="how" style="padding-top:96px;padding-bottom:96px;line-height:1.6;">
+  <div class="container ff-grid">
+    <div class="section-head ff-head" style="margin:0;">
       <div class="left">
-        <span class="eyebrow">How we work</span>
-        <h2>The operating <em>system</em></h2>
-      </div>
-      <div class="right">
-        <p>Three layers. Each one makes the next one possible. This is the structure we bring to every engagement, regardless of industry.</p>
+        <span class="eyebrow">How it works</span>
+        <h2>Foundation <em>first</em></h2>
       </div>
     </div>
-    <div class="cards-3">
-      <div class="card">
-        <div class="num">01</div>
-        <h3>Your <em>knowledge</em></h3>
-        <p>Your business knowledge captured and made searchable — the Company Brain. Processes, decisions, client histories, strategy. The foundation everything else is built on.</p>
-      </div>
-      <div class="card">
-        <div class="num">02</div>
-        <h3>Your <em>connections</em></h3>
-        <p>One platform that pulls together everything your team already uses. Email, documents, CRM, calendars, finance tools. One place to work from.</p>
-      </div>
-      <div class="card">
-        <div class="num">03</div>
-        <h3>Your <em>workflows</em></h3>
-        <p>The intelligent systems that save real time. Built on your context and your connections. That's what makes them work where generic tools don't.</p>
-      </div>
+
+    <!-- Pyramid stack: right-aligned bars, ascending width bottom → top -->
+    <span class="ff-stack-hint" id="ffStackHint" aria-hidden="true">Hover a tier to explore <span class="ff-stack-hint-arrow">&rarr;</span></span>
+    <div class="ff-stack" id="ffStack">
+      <button class="ff-bar ff-bar--partnership" data-tier="2" type="button" aria-label="Compound Intelligence">
+        <span class="ff-bar-label">Compound Intelligence</span>
+      </button>
+      <button class="ff-bar ff-bar--workflow" data-tier="1" type="button" aria-label="OS Expansion">
+        <span class="ff-bar-label">OS Expansion</span>
+      </button>
+      <button class="ff-bar ff-bar--foundation" data-tier="0" type="button" aria-label="Foundation Install">
+        <span class="ff-bar-label">Foundation Install</span>
+      </button>
+    </div>
+
+    <a href="pricing.html" class="ff-pricing-pill" id="ffPricingPill">Pricing <span aria-hidden="true">→</span></a>
+
+    <!-- Description, bottom-left. Hidden until hover. -->
+    <div class="ff-desc" id="ffDesc" aria-live="polite">
+      <span class="ff-desc-kicker">Foundation First</span>
+      <span class="ff-desc-num">01</span>
+      <h3 class="ff-desc-title"><strong>Foundation</strong> <em>Install</em></h3>
+      <p class="ff-desc-body">Your AI Operating System, installed in two weeks. Context configured, tools connected, workflows running. One fixed price. Your team uses it on day one.</p>
     </div>
   </div>
 </section>
 
 <!-- ============ WORK WITH US ============ -->
-<section class="navy contact" id="contact">
+<section class="cream contact" id="contact">
   <div class="container">
     <div class="head">
       <span class="eyebrow">Work with us</span>
       <hr class="rule">
       <h2>Ready to <em>start</em>?</h2>
     </div>
-    <p style="font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; color: var(--light-text); max-width: 580px; margin-bottom: 40px;">
-      A Foundation Assessment takes 30 minutes. We'll listen to what's actually happening in your operation, and tell you honestly where AI will move the needle — and where it won't.
+    <p style="font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; color: var(--navy); max-width: 580px; margin-bottom: 40px;">
+      A Foundation Assessment takes 30 minutes. We'll listen to what's actually happening in your operation, and tell you honestly where AI will move the needle, and where it won't.
     </p>
     <div class="ctas">
       <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
@@ -233,6 +269,7 @@
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
         <li><a href="index.html#field-notes">Field Notes</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -249,6 +286,141 @@
 </footer>
 
 <script>
+  // ===== Foundation First · Stacked bars =====
+  (function(){
+    var stack = document.getElementById('ffStack');
+    var desc  = document.getElementById('ffDesc');
+    if(!stack || !desc) return;
+    var bars = stack.querySelectorAll('.ff-bar');
+    var kickerEl = desc.querySelector('.ff-desc-kicker');
+    var numEl    = desc.querySelector('.ff-desc-num');
+    var titleEl  = desc.querySelector('.ff-desc-title');
+    var bodyEl   = desc.querySelector('.ff-desc-body');
+
+    var data = [
+      {
+        kicker: 'Foundation First',
+        num: '01',
+        title: '<strong>Foundation</strong> <em>Install</em>',
+        body: 'Your AI Operating System, installed in two weeks. Context configured, tools connected, workflows running. One fixed price. Your team uses it on day one.',
+        lanes: null
+      },
+      {
+        kicker: 'Foundation First',
+        num: '02',
+        title: '<strong>OS</strong> <em>Expansion</em>',
+        body: 'From here, you pick the shape. Three lanes, one platform:',
+        lanes: [
+          { name: 'Sustain', desc: 'We run your OS while you use it.' },
+          { name: 'Train',   desc: 'We train your team to run it themselves.' },
+          { name: 'Partner', desc: 'We become the AI team you\'d otherwise have to hire.' }
+        ],
+        close: 'The platform stays the same. The operating model scales with you.'
+      },
+      {
+        kicker: 'Foundation First',
+        num: '03',
+        title: '<strong>Compound</strong> <em>Intelligence</em>',
+        body: 'The longer your OS runs, the sharper it gets. Each layer feeds the next, and every new win makes every old one worth more.',
+        lanes: null
+      }
+    ];
+
+    function render(i){
+      var d = data[i];
+      kickerEl.textContent = d.kicker;
+      numEl.textContent = d.num;
+      titleEl.innerHTML = d.title;
+      var oldLanes = desc.querySelector('.ff-desc-lanes');
+      if (oldLanes) oldLanes.remove();
+      var oldClose = desc.querySelector('.ff-desc-close');
+      if (oldClose) oldClose.remove();
+      bodyEl.innerHTML = d.body;
+      if (d.lanes && d.lanes.length){
+        var ul = document.createElement('ul');
+        ul.className = 'ff-desc-lanes';
+        d.lanes.forEach(function(l){
+          var li = document.createElement('li');
+          li.innerHTML = '<span class="ff-lane-name">' + l.name + '</span> <span class="ff-lane-desc">' + l.desc + '</span>';
+          ul.appendChild(li);
+        });
+        bodyEl.insertAdjacentElement('afterend', ul);
+        if (d.close){
+          var p = document.createElement('p');
+          p.className = 'ff-desc-close';
+          p.innerHTML = d.close;
+          ul.insertAdjacentElement('afterend', p);
+        }
+      }
+    }
+
+    function setActive(i){
+      stack.classList.add('has-active');
+      bars.forEach(function(b){
+        b.classList.toggle('is-active', +b.getAttribute('data-tier') === i);
+      });
+      render(i);
+      desc.classList.add('is-visible');
+    }
+
+    function clearActive(){
+      stack.classList.remove('has-active');
+      bars.forEach(function(b){ b.classList.remove('is-active'); });
+      desc.classList.remove('is-visible');
+    }
+
+    bars.forEach(function(b){
+      var i = +b.getAttribute('data-tier');
+      b.addEventListener('mouseenter', function(){ setActive(i); });
+      b.addEventListener('focus',      function(){ setActive(i); });
+      b.addEventListener('click',      function(){ setActive(i); });
+    });
+    stack.addEventListener('mouseleave', clearActive);
+    stack.addEventListener('focusout', function(e){
+      if (!stack.contains(e.relatedTarget)) clearActive();
+    });
+
+    var demoPlayed = false;
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hint = document.getElementById('ffStackHint');
+
+    function playDemo(){
+      if (demoPlayed) return;
+      demoPlayed = true;
+      if (prefersReducedMotion) { if (hint) hint.classList.add('is-visible'); return; }
+      var order = [0, 1, 2];
+      var step = 700;
+      order.forEach(function(tier, i){
+        setTimeout(function(){ setActive(tier); }, i * step);
+      });
+      setTimeout(function(){
+        clearActive();
+        if (hint) hint.classList.add('is-visible');
+      }, order.length * step + 400);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting && e.intersectionRatio >= 0.55) {
+            playDemo();
+            io.disconnect();
+          }
+        });
+      }, { threshold: [0, 0.55, 1] });
+      io.observe(stack);
+    } else {
+      setTimeout(playDemo, 800);
+    }
+
+    bars.forEach(function(b){
+      b.addEventListener('mouseenter', function(){
+        demoPlayed = true;
+        if (hint) hint.classList.remove('is-visible');
+      }, { once: true });
+    });
+  })();
+
   const hamburger = document.getElementById('hamburger');
   const drawer = document.getElementById('navDrawer');
   hamburger.addEventListener('click', () => {
