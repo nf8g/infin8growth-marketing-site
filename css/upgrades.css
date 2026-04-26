@@ -28,13 +28,6 @@
   letter-spacing: -0.005em;
 }
 
-/* Three Layers standout words - darker gold, bold */
-.layer-tab .tab-label em,
-.layers .layer-slide h3 em {
-  color: #cc8f01;
-  font-weight: 700;
-}
-
 /* Subtle entrance animation primitives */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(14px); }
@@ -179,8 +172,8 @@
 .layer-tab .tab-label em {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
-  color: var(--gold);
+  font-weight: 700;
+  color: #cc8f01;
 }
 .layer-tab .tab-marker {
   width: 24px;
@@ -252,8 +245,8 @@
 .layer-slide h3 em {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
-  color: var(--gold);
+  font-weight: 700;
+  color: #cc8f01;
 }
 .layer-slide .lead {
   font-family: var(--serif);
