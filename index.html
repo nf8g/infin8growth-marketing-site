@@ -127,7 +127,7 @@
     <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
   </ul>
   <div class="drawer-cta">
-    <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+    <a href="https://start.infin8growth.ai/start" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
   </div>
 </nav>
 
@@ -154,9 +154,10 @@
       </div>
     </div>
     <div class="ctas">
-      <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+      <a href="https://start.infin8growth.ai/start" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
       <a href="#how" class="btn ghost">How it works</a>
     </div>
+    <p style="margin-top: 16px; font-size: 13px; color: var(--navy); opacity: 0.7;"><a href="https://calendly.com/marshall-tuten/foundation-assessment" style="color: inherit; text-decoration: underline;">Skip Assessment and Book a Call</a></p>
   </div>
 </section>
 
@@ -427,7 +428,7 @@
         <p>This is what a <strong>Foundation Install</strong> looks like when the business is genuinely complex: interconnected teams, massive brand implications, real profitability on the line, and operational layers that most consultancies would spend six months trying to understand. <em>We didn't start with a consulting engagement. We started with the install.</em></p>
         <p>Context configured. Connections wired to the tools the team already uses. Working sessions with senior leadership. Workflows going live, one after another. Each layer sharpening the next. <strong>One whole organisation, building outward from the Foundation Install so the change actually sticks and the OS compounds.</strong></p>
       </div>
-      <p class="closer">See how it works in practice. <a href="work.html" class="fn-link"><em>Read the case studies</em></a>. Or <a href="https://calendly.com/marshall-tuten/review-call" class="fn-link"><em>start with a Foundation Assessment</em></a> and find out where you actually stand before spending a dollar.</p>
+      <p class="closer">See how it works in practice. <a href="work.html" class="fn-link"><em>Read the case studies</em></a>. Or <a href="https://start.infin8growth.ai/start" class="fn-link"><em>start with a Foundation Assessment</em></a> and find out where you actually stand before spending a dollar.</p>
     </div>
     <figcaption class="state-caption">St. Michael's Mount, Cornwall. St. Aubyn Estates.</figcaption>
   </div>
@@ -547,7 +548,7 @@
       <p><a href="mailto:marshall@infin8growth.ai">marshall@infin8growth.ai</a></p>
       <p><a href="mailto:hello@infin8growth.ai">hello@infin8growth.ai</a></p>
     </div>
-    <p class="coda">Or <a href="https://calendly.com/marshall-tuten/review-call" class="fn-link-navy">start with a Foundation Assessment</a>. 30 minutes. We'll tell you honestly where you stand and what would move the needle first.</p>
+    <p class="coda">Or <a href="https://start.infin8growth.ai/start" class="fn-link-navy">start with a Foundation Assessment</a>. 30 minutes. We'll tell you honestly where you stand and what would move the needle first.</p>
   </div>
 </section>
 
@@ -878,48 +879,28 @@
       if (!stack.contains(e.relatedTarget)) clearActive();
     });
 
-    // ===== Scroll-triggered one-time demo: bars light up in sequence =====
-    // Fires once when the stack enters view, then stays at rest.
-    var demoPlayed = false;
-    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    function playDemo(){
-      if (demoPlayed) return;
-      demoPlayed = true;
-      if (prefersReducedMotion) { return; }
-      // Sequence: top (0) -> middle (1) -> bottom (2), each ~700ms, then clear.
-      var order = [0, 1, 2];
-      var step = 700;
-      order.forEach(function(tier, i){
-        setTimeout(function(){ setActive(tier); }, i * step);
-      });
-      // After the last one, fade it out.
-      setTimeout(function(){
-        clearActive();
-      }, order.length * step + 400);
+    // Show Foundation Install (tier 0) by default when section comes into view
+    var shown = false;
+    function showDefault(){
+      if (shown) return;
+      shown = true;
+      setActive(0); // Show Foundation Install by default
     }
 
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function(entries){
         entries.forEach(function(e){
           if (e.isIntersecting && e.intersectionRatio >= 0.55) {
-            playDemo();
+            showDefault();
             io.disconnect();
           }
         });
       }, { threshold: [0, 0.55, 1] });
       io.observe(stack);
     } else {
-      // Fallback: play after short delay
-      setTimeout(playDemo, 800);
+      // Fallback: show after short delay
+      setTimeout(showDefault, 800);
     }
-
-    // If the user interacts before the demo triggers, cancel the demo
-    bars.forEach(function(b){
-      b.addEventListener('mouseenter', function(){
-        demoPlayed = true;
-      }, { once: true });
-    });
   })();
 
   // ===== Interactive Context diagram =====

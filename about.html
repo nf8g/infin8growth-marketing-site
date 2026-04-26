@@ -124,7 +124,7 @@
     <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
   </ul>
   <div class="drawer-cta">
-    <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+    <a href="https://start.infin8growth.ai/start" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
   </div>
 </nav>
 
@@ -250,7 +250,7 @@
       A Foundation Assessment takes 30 minutes. We'll listen to what's actually happening in your operation, and tell you honestly where AI will move the needle, and where it won't.
     </p>
     <div class="ctas">
-      <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+      <a href="https://start.infin8growth.ai/start" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
     </div>
     <div class="emails" style="margin-top: 48px;">
       <p><a href="mailto:louisa@infin8growth.ai">louisa@infin8growth.ai</a></p>
@@ -378,45 +378,27 @@
       if (!stack.contains(e.relatedTarget)) clearActive();
     });
 
-    var demoPlayed = false;
-    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var hint = document.getElementById('ffStackHint');
-
-    function playDemo(){
-      if (demoPlayed) return;
-      demoPlayed = true;
-      if (prefersReducedMotion) { if (hint) hint.classList.add('is-visible'); return; }
-      var order = [0, 1, 2];
-      var step = 700;
-      order.forEach(function(tier, i){
-        setTimeout(function(){ setActive(tier); }, i * step);
-      });
-      setTimeout(function(){
-        clearActive();
-        if (hint) hint.classList.add('is-visible');
-      }, order.length * step + 400);
+    // Show Foundation Install (tier 0) by default when section comes into view
+    var shown = false;
+    function showDefault(){
+      if (shown) return;
+      shown = true;
+      setActive(0); // Show Foundation Install by default
     }
 
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function(entries){
         entries.forEach(function(e){
           if (e.isIntersecting && e.intersectionRatio >= 0.55) {
-            playDemo();
+            showDefault();
             io.disconnect();
           }
         });
       }, { threshold: [0, 0.55, 1] });
       io.observe(stack);
     } else {
-      setTimeout(playDemo, 800);
+      setTimeout(showDefault, 800);
     }
-
-    bars.forEach(function(b){
-      b.addEventListener('mouseenter', function(){
-        demoPlayed = true;
-        if (hint) hint.classList.remove('is-visible');
-      }, { once: true });
-    });
   })();
 
   const hamburger = document.getElementById('hamburger');
