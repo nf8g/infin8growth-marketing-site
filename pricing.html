@@ -470,6 +470,16 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .foundation-hero { padding: 40px 28px; }
     .expansion-card { padding: 24px; }
+    /* Mobile: move price to bottom of card details */
+    .expansion-card .ec-details-inner {
+      display: flex;
+      flex-direction: column;
+    }
+    .expansion-card .ec-price { order: 3; margin-top: 20px; margin-bottom: 4px; }
+    .expansion-card .ec-price-note { order: 4; margin-bottom: 20px; }
+    .expansion-card .ec-list { order: 1; margin-bottom: 0; }
+    .expansion-card .ec-cta { order: 5; }
+    .expansion-card .ec-partner-note { order: 2; }
   }
 </style>
 </head>
@@ -540,7 +550,7 @@
           <li><span class="fh-num">03</span><span>Context Folder — files and docs attached to your centralized Cowork project</span></li>
           <li><span class="fh-num">04</span><span>Onboarding setup and live training session</span></li>
           <li><span class="fh-num">05</span><span>Company-wide custom AI use policy</span></li>
-          <li><span class="fh-num">06</span><span>Anthropic Platform Access guide</span></li>
+          <li><span class="fh-num">06</span><span>OS Operating Manual</span></li>
         </ul>
       </div>
     </article>
@@ -561,12 +571,12 @@
           <p class="ec-summary">We run your OS while you use it.</p>
           <span class="ec-toggle">Details <span class="ec-toggle-icon" aria-hidden="true">+</span></span>
           <div class="ec-details"><div><div class="ec-details-inner">
-            <p class="ec-price">$1,200</p>
+            <p class="ec-price">$1,500</p>
             <p class="ec-price-note">Per month</p>
             <ul class="ec-list">
-              <li>2 monthly training sessions</li>
-              <li>1 monthly production-ready skill or tool to compound stronger</li>
-              <li>Access to individual consulting call booking</li>
+              <li>OS Maintenance</li>
+              <li>1 Leadership Strategy Session</li>
+              <li>1 Production Ready Skill</li>
             </ul>
             <div class="ec-cta">
               <a href="https://calendly.com/marshall-tuten/review-call">Talk to us →</a>
@@ -581,11 +591,13 @@
           <p class="ec-summary">We train your team to run it themselves.</p>
           <span class="ec-toggle">Details <span class="ec-toggle-icon" aria-hidden="true">+</span></span>
           <div class="ec-details"><div><div class="ec-details-inner">
-            <p class="ec-price">$2,300</p>
+            <p class="ec-price">$2,500</p>
             <p class="ec-price-note">Per month</p>
             <ul class="ec-list">
-              <li>Weekly training sessions</li>
-              <li>2 monthly production-ready skills or tools to compound stronger</li>
+              <li>OS Maintenance</li>
+              <li>2 Operating System Trainings</li>
+              <li>2 Production Ready Skills</li>
+              <li>1 Leadership Strategy Session</li>
             </ul>
             <div class="ec-cta">
               <a href="https://calendly.com/marshall-tuten/review-call">Talk to us →</a>

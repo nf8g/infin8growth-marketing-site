@@ -21,11 +21,18 @@
    Uses the brand serif italic treatment already on the site.
    */
 .gold-accent {
-  color: var(--gold);
+  color: #cc8f01;
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: -0.005em;
+}
+
+/* Three Layers standout words - darker gold, bold */
+.layer-tab .tab-label em,
+.layers .layer-slide h3 em {
+  color: #cc8f01;
+  font-weight: 700;
 }
 
 /* Subtle entrance animation primitives */
