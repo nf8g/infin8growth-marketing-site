@@ -807,7 +807,7 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
   margin-bottom: 32px;
 }
 .case-study blockquote {
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 32px 40px;
   border-left: 3px solid var(--gold);
   background: var(--gold-faint);
