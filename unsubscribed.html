@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unsubscribed · Field Notes</title>
+<meta name="description" content="You've been unsubscribed from Field Notes.">
+<meta name="robots" content="noindex">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-ocean: #0e2840;
+    --gold: #ffb700;
+    --text: #374151;
+    --light-gray: #9ca3af;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fafafa;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .container {
+    max-width: 480px;
+    background: white;
+    padding: 48px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(14, 40, 64, 0.08);
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--deep-ocean);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--deep-ocean);
+    margin-bottom: 8px;
+  }
+  .bar {
+    width: 40px;
+    height: 3px;
+    background: var(--gold);
+    margin: 20px auto;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .icon {
+    width: 64px;
+    height: 64px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+  }
+  .icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--light-gray);
+    stroke-width: 2;
+    fill: none;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--deep-ocean);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 24px;
+    transition: transform 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .resubscribe {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--light-gray);
+  }
+  .resubscribe a {
+    color: var(--deep-ocean);
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="icon">
+    <svg viewBox="0 0 24 24">
+      <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+    </svg>
+  </div>
+  <span class="eyebrow">Field Notes</span>
+  <h1>You've been unsubscribed.</h1>
+  <div class="bar"></div>
+  <p>We've removed you from Field Notes. You won't receive any more emails from us.</p>
+  <p>If this was a mistake, you can always resubscribe from our homepage.</p>
+  <a href="/" class="btn">Back to Infin8 Growth</a>
+  <p class="resubscribe">Changed your mind? <a href="/#field-notes">Resubscribe</a></p>
+</div>
+</body>
+</html>
