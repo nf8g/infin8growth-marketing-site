@@ -30,8 +30,22 @@ async function findSubscriberByEmail(email) {
   return data.records && data.records.length > 0 ? data.records[0] : null;
 }
 
-async function createSubscriber(email, firstName, source, token) {
+async function createSubscriber(email, firstName, company, source, token) {
   const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
+
+  const fields = {
+    "Email": email,
+    "First Name": firstName || "",
+    "Source": source || "website",
+    "Status": "pending",
+    "Confirm Token": token,
+    "Subscribed At": new Date().toISOString(),
+  };
+
+  // Only add Company if provided
+  if (company) {
+    fields["Company"] = company;
+  }
 
   const response = await fetch(url, {
     method: "POST",
@@ -40,16 +54,7 @@ async function createSubscriber(email, firstName, source, token) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      records: [{
-        fields: {
-          "Email": email,
-          "First Name": firstName || "",
-          "Source": source || "website",
-          "Status": "pending",
-          "Confirm Token": token,
-          "Subscribed At": new Date().toISOString(),
-        },
-      }],
+      records: [{ fields }],
     }),
   });
 
@@ -105,7 +110,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { email, firstName, source } = req.body;
+    const { email, firstName, company, source } = req.body;
 
     if (!email || typeof email !== "string") {
       return res.status(400).json({ error: "Email is required" });
@@ -128,7 +133,7 @@ module.exports = async (req, res) => {
 
     // Create new subscriber
     const token = generateToken();
-    const subscriber = await createSubscriber(normalizedEmail, firstName, source, token);
+    const subscriber = await createSubscriber(normalizedEmail, firstName, company, source, token);
 
     if (!subscriber) {
       return res.status(500).json({ error: "Failed to subscribe" });

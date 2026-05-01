@@ -666,6 +666,20 @@ nav.top a.active::after { transform: scaleX(1); }
 }
 .news .note { margin-top: 18px; font-size: 13px; color: var(--muted-cream); }
 
+/* Subscribe form expanded layout */
+.subscribe { display: block; max-width: 540px; }
+.subscribe-fields { display: flex; flex-direction: column; gap: 12px; }
+.subscribe-row { display: flex; gap: 12px; }
+.subscribe-row input { flex: 1; }
+.subscribe-row button { flex-shrink: 0; }
+.subscribe-success { padding: 20px; background: rgba(74, 155, 142, 0.15); border-radius: 8px; border: 1px solid var(--seafoam); }
+.subscribe-success .success-message { margin: 0; color: var(--seafoam); font-size: 15px; font-weight: 500; }
+
+@media (max-width: 600px) {
+  .subscribe-row { flex-direction: column; }
+  .subscribe-row button { width: 100%; }
+}
+
 /* ── OUT AND ABOUT ──────────────────────────────────── */
 .where .grid {
   display: grid;
