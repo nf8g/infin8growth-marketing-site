@@ -3,6 +3,8 @@
  * Uses Airtable REST API directly (no SDK) for simplicity.
  */
 
+import { randomUUID } from "crypto";
+
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID!;
 const AIRTABLE_SUBSCRIBERS_TABLE_ID = process.env.AIRTABLE_SUBSCRIBERS_TABLE_ID!;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN!;
@@ -198,7 +200,7 @@ export async function updateSubscriber(
  * Generate a unique confirmation token
  */
 export function generateToken(): string {
-  return crypto.randomUUID();
+  return randomUUID();
 }
 
 /**
