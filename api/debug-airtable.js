@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
     results.readTest = `ERROR: ${err.message}`;
   }
 
-  // Test 2: Can we write to the table?
+  // Test 2: Can we write to the table? (same fields as subscribe API)
   try {
     const writeUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
     const writeRes = await fetch(writeUrl, {
@@ -42,9 +42,13 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         records: [{
           fields: {
-            "Email": "debug-test@example.com",
+            "Email": "debug-full-test@example.com",
+            "First Name": "DebugFirst",
             "Source": "debug-test",
             "Status": "pending",
+            "Confirm Token": "test-token-123",
+            "Subscribed At": new Date().toISOString(),
+            "Company": "DebugCompany",
           },
         }],
       }),
