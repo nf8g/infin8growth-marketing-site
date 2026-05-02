@@ -437,17 +437,36 @@
 <!-- ============ FIELD NOTES ============ -->
 <section class="navy news news-upgrade" id="field-notes">
   <div class="container">
+    <!-- Top row: Newsletter info on left, Subscribe form on right -->
     <div class="lead">
       <div class="left">
         <span class="eyebrow">The newsletter</span>
         <h2><em>Field</em> Notes</h2>
+        <p style="font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--light-text); margin-top: 24px;">A weekly letter on AI implementation for knowledge-based businesses. From <span class="name" style="font-family: var(--serif); font-style: italic; color: var(--gold);">Infin8</span>.</p>
+        <p style="font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--light-text); margin-top: 0.9em;"><em>Field Notes</em> is what we're seeing each week. What's being tried, what's working, what isn't. Real examples from the businesses we work with, and things you can try yourself.</p>
       </div>
       <div class="right">
-        <p>A weekly letter on AI implementation for knowledge-based businesses. From <span class="name">Infin8</span>.</p>
-        <p><em>Field Notes</em> is what we're seeing each week. What's being tried, what's working, what isn't. Real examples from the businesses we work with, and things you can try yourself.</p>
+        <span class="eyebrow">Subscribe</span>
+        <h3 style="font-family: var(--serif); font-style: italic; font-size: 28px; font-weight: 400; margin: 0 0 24px; color: #ffffff;">One issue a week.<br>Free, always.</h3>
+        <form class="subscribe" id="subscribeForm">
+          <div class="subscribe-fields">
+            <div class="subscribe-row">
+              <input type="text" name="firstName" placeholder="First name" aria-label="First name" required>
+              <input type="text" name="company" placeholder="Company (optional)" aria-label="Company name">
+            </div>
+            <div class="subscribe-row">
+              <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
+              <button type="submit" class="btn">Subscribe <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </form>
+        <div class="subscribe-success" id="subscribeSuccess" style="display: none;">
+          <p class="success-message">Thank you for subscribing! Check your inbox for a confirmation email.</p>
+        </div>
       </div>
     </div>
 
+    <!-- Archive section below -->
     <div class="archive-masthead">
       <span class="title"><em>The archive</em></span>
       <span class="meta">Vol. I · Est. 2026</span>
@@ -480,30 +499,6 @@
       </div>
     </div>
 
-    <div class="subscribe-block">
-      <div class="left">
-        <span class="eyebrow">Subscribe</span>
-        <h3>One issue a week.<br>Free, always.</h3>
-      </div>
-      <div class="right">
-        <form class="subscribe" id="subscribeForm">
-          <div class="subscribe-fields">
-            <div class="subscribe-row">
-              <input type="text" name="firstName" placeholder="First name" aria-label="First name" required>
-              <input type="text" name="company" placeholder="Company (optional)" aria-label="Company name">
-            </div>
-            <div class="subscribe-row">
-              <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
-              <button type="submit" class="btn">Subscribe <span class="arrow">→</span></button>
-            </div>
-          </div>
-        </form>
-        <div class="subscribe-success" id="subscribeSuccess" style="display: none;">
-          <p class="success-message">Thank you for subscribing! Check your inbox for a confirmation email.</p>
-        </div>
-        <p class="note">No signup needed to read back issues.</p>
-      </div>
-    </div>
   </div>
 </section>
 
