@@ -75,7 +75,7 @@ export function welcomeEmail(firstName?: string, unsubscribeToken?: string): str
   const unsubscribeUrl = unsubscribeToken
     ? `${BASE_URL}/api/newsletter/unsubscribe?token=${unsubscribeToken}`
     : `${BASE_URL}/api/newsletter/unsubscribe`;
-  const greeting = firstName ? `Welcome, ${firstName}.` : "Welcome aboard.";
+  const greeting = firstName ? `Welcome, ${firstName}.` : "Welcome.";
 
   return emailWrapper(`
     <h1 style="font-size: 24px; font-weight: 700; color: ${BRAND.deepOcean}; margin: 0 0 8px;">
@@ -83,30 +83,32 @@ export function welcomeEmail(firstName?: string, unsubscribeToken?: string): str
     </h1>
     <div style="width: 40px; height: 3px; background: ${BRAND.gold}; margin: 16px 0;"></div>
     <p style="font-size: 15px; line-height: 1.75; margin: 0 0 16px;">
-      You're now subscribed to Field Notes.
+      This is Marshall Tuten. At some point we've found each other. Could've been YouTube, LinkedIn, our website, or some in-person event. By any means, my goal in reaching out to you is to provide you my weekly Field Notes: practical insights from someone who's actually wiring this stuff into businesses every week.
     </p>
     <p style="font-size: 15px; line-height: 1.75; margin: 0 0 16px;">
-      Every week, you'll get one email with practical insights on building AI infrastructure for knowledge-based businesses. Real patterns from real implementations. No promotional fluff.
-    </p>
-    <p style="font-size: 15px; line-height: 1.75; margin: 0 0 16px;">
-      <strong>What to expect:</strong>
+      Field Notes lands in your inbox from me and the team at Infin8. Here's what you're getting:
     </p>
     <ul style="font-size: 15px; line-height: 1.75; margin: 0 0 24px; padding-left: 20px; color: ${BRAND.textGray};">
-      <li>Implementation patterns that work</li>
-      <li>Lessons from Foundation Installs</li>
-      <li>Tool recommendations (honest ones)</li>
-      <li>Strategic insights for business owners</li>
+      <li>Patterns in what we're seeing from real AI Operating System installs (what's working, what's not)</li>
+      <li>Honest tool recommendations</li>
+      <li>Strategic thinking for business owners who want to build, not just buy</li>
+      <li>Lessons I've learned the hard way</li>
     </ul>
+    <p style="font-size: 15px; line-height: 1.75; margin: 0 0 16px;">
+      Oh… and if you have a particular area of expertise that could be useful as we engage with our clients down the road, we're always looking to collaborate.
+    </p>
+    <p style="font-size: 15px; line-height: 1.75; margin: 0 0 16px;">
+      We avoid promotional fluff here. While I'll certainly attach some media here and there like a YouTube video, blog post, or something else, the goal is to provide valuable insight into what we're experiencing at Infin8 during this exciting time.
+    </p>
+    <p style="font-size: 15px; line-height: 1.75; margin: 0 0 16px;">
+      <strong>One thing I'd ask:</strong> when you read something that resonates (or something you disagree with), hit reply. We read responses and those replies shape what I write next.
+    </p>
     <p style="font-size: 15px; line-height: 1.75; margin: 0 0 24px;">
-      The first regular issue arrives next week. In the meantime, reply to this email if you have questions. I read every response.
+      And of course, if you don't want to hear from me at all, please <a href="${unsubscribeUrl}" style="color: ${BRAND.deepOcean};">unsubscribe</a>.
     </p>
     <p style="font-size: 15px; line-height: 1.75; margin: 0;">
-      Talk soon,<br/>
-      <strong>Marshall Tuten</strong><br/>
-      <span style="color: ${BRAND.lightGray};">Infin8 Growth</span>
-    </p>
-    <p style="font-size: 12px; color: ${BRAND.lightGray}; margin-top: 32px;">
-      <a href="${unsubscribeUrl}" style="color: ${BRAND.lightGray};">Unsubscribe</a>
+      Cheers,<br/>
+      <strong>Marshall</strong>
     </p>
   `);
 }
