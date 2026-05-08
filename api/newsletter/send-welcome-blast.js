@@ -7,59 +7,8 @@ const AIRTABLE_TABLE_ID = process.env.AIRTABLE_SUBSCRIBERS_TABLE_ID;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
 const BASE_URL = "https://infin8growth.ai";
 
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-async function findSubscriberByEmail(email) {
-  const formula = encodeURIComponent(`{Email} = "${email}"`);
-  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}?filterByFormula=${formula}`;
-
-  const response = await fetch(url, {
-    headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` },
-  });
-
-  if (!response.ok) return null;
-
-  const data = await response.json();
-  return data.records && data.records.length > 0 ? data.records[0] : null;
-}
-
-async function createSubscriber(email, firstName, company, source) {
-  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
-
-  const fields = {
-    "Email": email,
-    "First Name": firstName || "",
-    "Source": source || "website",
-    "Status": "subscribed",
-    "Subscribed At": new Date().toISOString(),
-  };
-
-  // Only add Company if provided
-  if (company) {
-    fields["Company"] = company;
-  }
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${AIRTABLE_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      records: [{ fields }],
-    }),
-  });
-
-  if (!response.ok) {
-    console.error("Airtable create error:", await response.text());
-    return null;
-  }
-
-  const data = await response.json();
-  return data.records && data.records.length > 0 ? data.records[0] : null;
-}
+// Secret key to prevent unauthorized access
+const BLAST_SECRET = process.env.NEWSLETTER_BLAST_SECRET;
 
 function welcomeEmailHTML(firstName, email) {
   const unsubscribeUrl = `${BASE_URL}/api/newsletter/unsubscribe?email=${encodeURIComponent(email)}`;
@@ -112,68 +61,107 @@ function welcomeEmailHTML(firstName, email) {
   `;
 }
 
+async function getAllSubscribers() {
+  const subscribers = [];
+  let offset = null;
+
+  do {
+    const url = new URL(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`);
+    url.searchParams.set("filterByFormula", '{Status} = "subscribed"');
+    url.searchParams.set("fields[]", "Email");
+    url.searchParams.append("fields[]", "First Name");
+    if (offset) {
+      url.searchParams.set("offset", offset);
+    }
+
+    const response = await fetch(url.toString(), {
+      headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Airtable error: ${await response.text()}`);
+    }
+
+    const data = await response.json();
+    subscribers.push(...data.records);
+    offset = data.offset;
+  } while (offset);
+
+  return subscribers;
+}
+
 module.exports = async (req, res) => {
-  // Handle CORS
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-
+  // Only allow POST
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  // Check secret key
+  const { secret, dryRun } = req.body;
+
+  if (!BLAST_SECRET) {
+    return res.status(500).json({ error: "NEWSLETTER_BLAST_SECRET not configured in Vercel" });
+  }
+
+  if (secret !== BLAST_SECRET) {
+    return res.status(401).json({ error: "Invalid secret" });
+  }
+
   try {
-    const { email, firstName, company, source } = req.body;
+    // Get all subscribers
+    const subscribers = await getAllSubscribers();
 
-    if (!email || typeof email !== "string") {
-      return res.status(400).json({ error: "Email is required" });
+    if (dryRun) {
+      // Just return the list without sending
+      return res.status(200).json({
+        dryRun: true,
+        count: subscribers.length,
+        subscribers: subscribers.map(s => ({
+          email: s.fields.Email,
+          firstName: s.fields["First Name"] || "(none)",
+        })),
+      });
     }
 
-    const normalizedEmail = email.toLowerCase().trim();
+    // Send emails
+    const results = {
+      total: subscribers.length,
+      sent: 0,
+      failed: 0,
+      errors: [],
+    };
 
-    if (!isValidEmail(normalizedEmail)) {
-      return res.status(400).json({ error: "Invalid email format" });
-    }
+    for (const subscriber of subscribers) {
+      const email = subscriber.fields.Email;
+      const firstName = subscriber.fields["First Name"];
 
-    // Check if already subscribed
-    const existing = await findSubscriberByEmail(normalizedEmail);
-    if (existing) {
-      const status = existing.fields.Status;
-      if (status === "subscribed" || status === "confirmed") {
-        return res.status(200).json({ success: true, message: "Already subscribed" });
+      try {
+        const { error } = await resend.emails.send({
+          from: "Field Notes <fieldnotes@infin8growth.ai>",
+          replyTo: "marshall@infin8growth.ai",
+          to: email,
+          subject: "Welcome to Field Notes",
+          html: welcomeEmailHTML(firstName, email),
+        });
+
+        if (error) {
+          results.failed++;
+          results.errors.push({ email, error: error.message });
+        } else {
+          results.sent++;
+        }
+
+        // Small delay to avoid rate limits
+        await new Promise(resolve => setTimeout(resolve, 100));
+      } catch (err) {
+        results.failed++;
+        results.errors.push({ email, error: err.message });
       }
     }
 
-    // Create new subscriber
-    const subscriber = await createSubscriber(normalizedEmail, firstName, company, source);
-
-    if (!subscriber) {
-      return res.status(500).json({ error: "Failed to subscribe" });
-    }
-
-    // Send welcome email immediately
-    const { error: emailError } = await resend.emails.send({
-      from: "Field Notes <fieldnotes@infin8growth.ai>",
-      replyTo: "marshall@infin8growth.ai",
-      to: normalizedEmail,
-      subject: "Welcome to Field Notes",
-      html: welcomeEmailHTML(firstName, normalizedEmail),
-    });
-
-    if (emailError) {
-      console.error("Resend error:", emailError);
-    }
-
-    return res.status(200).json({
-      success: true,
-      message: "You're subscribed! Check your inbox for a welcome email.",
-    });
+    return res.status(200).json(results);
   } catch (error) {
-    console.error("Subscribe error:", error);
-    return res.status(500).json({ error: "Server error" });
+    console.error("Blast error:", error);
+    return res.status(500).json({ error: error.message });
   }
 };

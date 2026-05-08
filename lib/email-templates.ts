@@ -75,7 +75,7 @@ export function welcomeEmail(firstName?: string, unsubscribeToken?: string): str
   const unsubscribeUrl = unsubscribeToken
     ? `${BASE_URL}/api/newsletter/unsubscribe?token=${unsubscribeToken}`
     : `${BASE_URL}/api/newsletter/unsubscribe`;
-  const greeting = firstName ? `Welcome, ${firstName}.` : "Welcome.";
+  const greeting = firstName ? `Welcome, ${firstName}.` : "Welcome to Field Notes.";
 
   return emailWrapper(`
     <h1 style="font-size: 24px; font-weight: 700; color: ${BRAND.deepOcean}; margin: 0 0 8px;">
