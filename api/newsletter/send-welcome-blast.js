@@ -97,7 +97,7 @@ module.exports = async (req, res) => {
   }
 
   // Check secret key
-  const { secret, dryRun } = req.body;
+  const { secret, dryRun, exclude } = req.body;
 
   if (!BLAST_SECRET) {
     return res.status(500).json({ error: "NEWSLETTER_BLAST_SECRET not configured in Vercel" });
@@ -109,7 +109,14 @@ module.exports = async (req, res) => {
 
   try {
     // Get all subscribers
-    const subscribers = await getAllSubscribers();
+    let subscribers = await getAllSubscribers();
+
+    // Exclude specific emails if provided
+    const excludeList = exclude || [];
+    if (excludeList.length > 0) {
+      const excludeSet = new Set(excludeList.map(e => e.toLowerCase()));
+      subscribers = subscribers.filter(s => !excludeSet.has(s.fields.Email.toLowerCase()));
+    }
 
     if (dryRun) {
       // Just return the list without sending
