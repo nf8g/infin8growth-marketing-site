@@ -5,10 +5,42 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
 const AIRTABLE_TABLE_ID = process.env.AIRTABLE_SUBSCRIBERS_TABLE_ID;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
+const KIT_API_KEY = process.env.KIT_API_KEY;
 const BASE_URL = "https://infin8growth.ai";
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+async function addToKit(email, firstName) {
+  if (!KIT_API_KEY) {
+    console.error("KIT_API_KEY not configured");
+    return false;
+  }
+
+  try {
+    const response = await fetch("https://api.kit.com/v4/subscribers", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${KIT_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: email,
+        first_name: firstName || "",
+      }),
+    });
+
+    if (!response.ok) {
+      console.error("Kit error:", await response.text());
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.error("Kit sync error:", err);
+    return false;
+  }
 }
 
 async function findSubscriberByEmail(email) {
@@ -148,12 +180,15 @@ module.exports = async (req, res) => {
       }
     }
 
-    // Create new subscriber
+    // Create new subscriber in Airtable
     const subscriber = await createSubscriber(normalizedEmail, firstName, company, source);
 
     if (!subscriber) {
       return res.status(500).json({ error: "Failed to subscribe" });
     }
+
+    // Sync to Kit (don't fail if this fails)
+    await addToKit(normalizedEmail, firstName);
 
     // Send welcome email immediately
     const { error: emailError } = await resend.emails.send({
