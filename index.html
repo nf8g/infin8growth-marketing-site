@@ -13,8 +13,9 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://infin8growth.ai/">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YTS35YGLZ"></script>
 <script>
@@ -1023,26 +1024,31 @@
   // Tab attention: animate title when user leaves the tab
   (function() {
     var originalTitle = document.title;
-    var message = '👀 Foundation First...';
+    var prefix = '👀 ';
+    var text = 'Foundation First...';
+    var chars = Array.from(text);
     var index = 0;
     var timer = null;
 
     function type() {
-      index = (index % message.length) + 1;
-      document.title = message.substring(0, index);
-      if (index === message.length) {
+      index++;
+      if (index > chars.length) {
         // Pause at full message, then restart
         clearInterval(timer);
         setTimeout(function() {
           index = 0;
+          document.title = prefix;
           timer = setInterval(type, 150);
         }, 1500);
+      } else {
+        document.title = prefix + chars.slice(0, index).join('');
       }
     }
 
     document.addEventListener('visibilitychange', function() {
       if (document.hidden) {
         index = 0;
+        document.title = prefix; // Show emoji immediately
         timer = setInterval(type, 150);
       } else {
         clearInterval(timer);
