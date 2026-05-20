@@ -1017,5 +1017,39 @@
   })();
 </script>
 
+<script>
+  // Tab attention: animate title when user leaves the tab
+  (function() {
+    var originalTitle = document.title;
+    var message = '👀 Foundation First...';
+    var index = 0;
+    var timer = null;
+
+    function type() {
+      index = (index % message.length) + 1;
+      document.title = message.substring(0, index);
+      if (index === message.length) {
+        // Pause at full message, then restart
+        clearInterval(timer);
+        setTimeout(function() {
+          index = 0;
+          timer = setInterval(type, 150);
+        }, 1500);
+      }
+    }
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        index = 0;
+        timer = setInterval(type, 150);
+      } else {
+        clearInterval(timer);
+        timer = null;
+        document.title = originalTitle;
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
