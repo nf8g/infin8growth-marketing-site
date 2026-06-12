@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://infin8growth.ai/#louisa-st-aubyn",
+  "name": "Louisa St. Aubyn",
+  "givenName": "Louisa",
+  "familyName": "St. Aubyn",
+  "jobTitle": "Co-Founder & CTO",
+  "description": "British surf competitor turned AI architect. Co-Founder of Infin8 Growth, setting AI strategy and building technical architecture for knowledge-based businesses. Leads embedded partner engagements including the live build at St Michael's Mount in Cornwall.",
+  "url": "https://infin8growth.ai/about.html",
+  "sameAs": [
+    "https://www.linkedin.com/in/louisa-st-aubyn-375014259"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://infin8growth.ai/#org",
+    "name": "Infin8 Growth",
+    "url": "https://infin8growth.ai"
+  },
+  "founder": {
+    "@type": "Organization",
+    "@id": "https://infin8growth.ai/#org"
+  },
+  "knowsAbout": [
+    "AI Operating Systems",
+    "AI Architecture",
+    "Claude and Anthropic Ecosystem",
+    "Model Context Protocol (MCP)",
+    "Knowledge Management Systems",
+    "Foundation First Methodology",
+    "Heritage and Tourism Technology"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Cornwall",
+    "addressCountry": "UK"
+  }
+}
