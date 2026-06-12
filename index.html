@@ -63,12 +63,61 @@
   ]
 }
 </script>
+<!-- FAQ schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does AI implementation cost for a small business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I actually get from a Foundation Install?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You get a working AI Operating System configured for your business. Specifically: a Context Layer (10-15 files capturing how your business works), a Connections Layer (your existing tools wired together through one interface), and a Workflows Layer (2-3 automated processes running by the end of week two). You also get your team trained to use it. This isn't a strategy document or a recommendations report. It's infrastructure you operate the day we hand it over."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the Foundation Install take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About two weeks. Week one is building your Context Layer: a guided session where we capture how your business actually runs. Week two is connecting your tools and configuring your first workflows. This is an install with a defined timeline, defined deliverables, and a working system at the end that we can help you expand on over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from other AI investments I could make?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most AI investments are one dimensional. This is infrastructure. Instead of a single tool that solves one problem or a training that teaches concepts but no direct application to your business, your Foundation Install becomes the AI layer your team and business run on. It compounds over time because every workflow we add builds on the foundation we've already installed. You're building an asset that gets more valuable the longer it runs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We've tried AI before and it didn't stick. Why would this be different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because we build the foundation before the features. Most AI experiments fail because they start with a tool instead of starting with context. The tool doesn't know your business, so it gives generic outputs. Your team gets frustrated. The tool gets shelved. We start with your business knowledge captured and your systems connected. When AI has that foundation, it stops feeling like an experiment and starts feeling like infrastructure. That's why it sticks."
+      }
+    }
+  ]
+}
+</script>
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/upgrades.css?v=state1">
+<link rel="stylesheet" href="css/upgrades.css?v=state2">
 <style>
   .ff-grid { position: relative; }
   .ff-pricing-pill {
@@ -110,6 +159,7 @@
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="index.html#field-notes">Field Notes</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -127,10 +177,11 @@
     <li><a href="pricing.html" onclick="closeDrawer()">Pricing</a></li>
     <li><a href="index.html#field-notes" onclick="closeDrawer()">Field Notes</a></li>
     <li><a href="blog.html" onclick="closeDrawer()">Blog</a></li>
+    <li><a href="faq.html" onclick="closeDrawer()">FAQ</a></li>
     <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
   </ul>
   <div class="drawer-cta">
-    <a href="https://start.infin8growth.ai/start" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+    <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
   </div>
 </nav>
 
@@ -143,24 +194,23 @@
     <div class="lede-boxes">
       <div class="lede-row">
         <div class="lede-box">
-          <p>Stop losing hours to "where is that file?" Your institutional knowledge becomes <span class="gold-accent">searchable, shareable, permanent</span>.</p>
+          <p>We build the <span class="gold-accent">knowledge infrastructure</span> first: your context, your connected systems, your intelligent workflows.</p>
           <img src="assets/icons/brain.svg" class="lede-icon" alt="">
         </div>
         <div class="lede-box">
-          <p>Stop copying data between systems. <span class="gold-accent">One platform</span> wired to your tools. Information flows where it's needed.</p>
+          <p>Not another AI tool bolted onto what you have now. An operating system built on how your <span class="gold-accent">business actually works</span>.</p>
           <img src="assets/icons/ship.svg" class="lede-icon" alt="">
         </div>
       </div>
       <div class="lede-box lede-box--solo">
-        <p><span class="gold-accent">Day one value</span> in two weeks. Context configured, tools connected, workflows running. A foundation for everything that comes next.</p>
+        <p>Our <span class="gold-accent">Foundation First</span> methodology gets you an operating system that knows and does what you know and do.</p>
         <img src="assets/icons/gear.svg" class="lede-icon" alt="">
       </div>
     </div>
     <div class="ctas">
-      <a href="https://start.infin8growth.ai/start" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+      <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
       <a href="#how" class="btn ghost">How it works</a>
     </div>
-    <p style="margin-top: 16px; font-size: 13px; color: var(--navy); opacity: 0.7;"><a href="https://calendly.com/marshall-tuten/foundation-assessment" style="color: inherit; text-decoration: underline;">Skip Assessment and Book a Call</a></p>
   </div>
 </section>
 
@@ -391,16 +441,17 @@
       </div>
     </div>
 
-    <!-- Foundation First stack: top to bottom flow -->
+    <!-- Pyramid stack: right-aligned bars, ascending width bottom → top -->
+    <span class="ff-stack-hint" id="ffStackHint" aria-hidden="true">Hover a tier to explore <span class="ff-stack-hint-arrow">&rarr;</span></span>
     <div class="ff-stack" id="ffStack">
-      <button class="ff-bar ff-bar--foundation" data-tier="0" type="button" aria-label="Foundation Install">
-        <span class="ff-bar-label">Foundation Install</span>
+      <button class="ff-bar ff-bar--partnership" data-tier="2" type="button" aria-label="Compound Intelligence">
+        <span class="ff-bar-label">Compound Intelligence</span>
       </button>
       <button class="ff-bar ff-bar--workflow" data-tier="1" type="button" aria-label="OS Expansion">
         <span class="ff-bar-label">OS Expansion</span>
       </button>
-      <button class="ff-bar ff-bar--partnership" data-tier="2" type="button" aria-label="Compound Intelligence">
-        <span class="ff-bar-label">Compound Intelligence</span>
+      <button class="ff-bar ff-bar--foundation" data-tier="0" type="button" aria-label="Foundation Install">
+        <span class="ff-bar-label">Foundation Install</span>
       </button>
     </div>
 
@@ -431,7 +482,7 @@
         <p>This is what a <strong>Foundation Install</strong> looks like when the business is genuinely complex: interconnected teams, massive brand implications, real profitability on the line, and operational layers that most consultancies would spend six months trying to understand. <em>We didn't start with a consulting engagement. We started with the install.</em></p>
         <p>Context configured. Connections wired to the tools the team already uses. Working sessions with senior leadership. Workflows going live, one after another. Each layer sharpening the next. <strong>One whole organisation, building outward from the Foundation Install so the change actually sticks and the OS compounds.</strong></p>
       </div>
-      <p class="closer">See how it works in practice. <a href="work.html" class="fn-link"><em>Read the case studies</em></a>. Or <a href="https://start.infin8growth.ai/start" class="fn-link"><em>start with a Foundation Assessment</em></a> and find out where you actually stand before spending a dollar.</p>
+      <p class="closer">See how it works in practice. <a href="work.html" class="fn-link"><em>Read the case studies</em></a>. Or <a href="https://calendly.com/marshall-tuten/review-call" class="fn-link"><em>start with a Foundation Assessment</em></a> and find out where you actually stand before spending a dollar.</p>
     </div>
     <figcaption class="state-caption">St. Michael's Mount, Cornwall. St. Aubyn Estates.</figcaption>
   </div>
@@ -440,36 +491,17 @@
 <!-- ============ FIELD NOTES ============ -->
 <section class="navy news news-upgrade" id="field-notes">
   <div class="container">
-    <!-- Top row: Newsletter info on left, Subscribe form on right -->
     <div class="lead">
       <div class="left">
         <span class="eyebrow">The newsletter</span>
         <h2><em>Field</em> Notes</h2>
-        <p style="font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--light-text); margin-top: 24px;">Letters on AI implementation for knowledge-based businesses. From <span class="name" style="font-family: var(--serif); font-style: italic; color: var(--gold);">Infin8</span>.</p>
-        <p style="font-family: var(--serif); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--light-text); margin-top: 0.9em;"><em>Field Notes</em> is what we're seeing in practice. What's being tried, what's working, what isn't. Real examples from the businesses we work with, and things you can try yourself.</p>
       </div>
       <div class="right">
-        <span class="eyebrow">Subscribe</span>
-        <h3 style="font-family: var(--serif); font-style: italic; font-size: 28px; font-weight: 400; margin: 0 0 24px; color: #ffffff;">Free, always.</h3>
-        <form class="subscribe" id="subscribeForm">
-          <div class="subscribe-fields">
-            <div class="subscribe-row">
-              <input type="text" name="firstName" placeholder="First name" aria-label="First name" required>
-              <input type="text" name="company" placeholder="Company (optional)" aria-label="Company name">
-            </div>
-            <div class="subscribe-row">
-              <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
-              <button type="submit" class="btn">Subscribe <span class="arrow">→</span></button>
-            </div>
-          </div>
-        </form>
-        <div class="subscribe-success" id="subscribeSuccess" style="display: none;">
-          <p class="success-message">Thank you for subscribing! Check your inbox for a confirmation email.</p>
-        </div>
+        <p>A weekly letter on AI implementation for knowledge-based businesses. From <span class="name">Infin8</span>.</p>
+        <p><em>Field Notes</em> is what we're seeing each week. What's being tried, what's working, what isn't. Real examples from the businesses we work with, and things you can try yourself.</p>
       </div>
     </div>
 
-    <!-- Archive section below -->
     <div class="archive-masthead">
       <span class="title"><em>The archive</em></span>
       <span class="meta">Vol. I · Est. 2026</span>
@@ -502,6 +534,19 @@
       </div>
     </div>
 
+    <div class="subscribe-block">
+      <div class="left">
+        <span class="eyebrow">Subscribe</span>
+        <h3>One issue a week.<br>Free, always.</h3>
+      </div>
+      <div class="right">
+        <form class="subscribe" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="your@email.com" aria-label="Email address">
+          <button type="submit" class="btn">Subscribe <span class="arrow">→</span></button>
+        </form>
+        <p class="note">No signup needed to read back issues.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -538,7 +583,74 @@
         <p class="meta">East Coast · West Coast</p>
         <h3>Across <em>the US</em></h3>
         <p>Marshall is on the East Coast. Louisa is on the West Coast. We have a live network of businesses right across the country. Reply to any Field Notes issue and we'll find a way to meet.</p>
-        <p><a href="https://www.aicollective.com/chapters/new-haven" target="_blank" rel="noopener" style="color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 1px;">Attend AI and innovation events in New England.</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="cream faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">Common questions</span>
+        <h2>Frequently <em>asked</em></h2>
+      </div>
+      <div class="right">
+        <p>Straight answers on cost, timeline, and what you actually get.</p>
+        <a href="faq.html" class="faq-viewall">View all FAQs <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span class="faq-q-text">How much does AI implementation cost for a small business?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div><div class="faq-a-inner">
+          <p>The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span class="faq-q-text">What do I actually get from a Foundation Install?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div><div class="faq-a-inner">
+          <p>You get a working AI Operating System configured for your business. Specifically: a Context Layer (10-15 files capturing how your business works), a Connections Layer (your existing tools wired together through one interface), and a Workflows Layer (2-3 automated processes running by the end of week two). You also get your team trained to use it. This isn't a strategy document or a recommendations report. It's infrastructure you operate the day we hand it over.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span class="faq-q-text">How long does the Foundation Install take?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div><div class="faq-a-inner">
+          <p>About two weeks. Week one is building your Context Layer: a guided session where we capture how your business actually runs. Week two is connecting your tools and configuring your first workflows. This is an install with a defined timeline, defined deliverables, and a working system at the end that we can help you expand on over time.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span class="faq-q-text">How is this different from other AI investments I could make?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div><div class="faq-a-inner">
+          <p>Most AI investments are one dimensional. This is infrastructure. Instead of a single tool that solves one problem or a training that teaches concepts but no direct application to your business, your Foundation Install becomes the AI layer your team and business run on. It compounds over time because every workflow we add builds on the foundation we've already installed. You're building an asset that gets more valuable the longer it runs.</p>
+        </div></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span class="faq-q-text">We've tried AI before and it didn't stick. Why would this be different?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div><div class="faq-a-inner">
+          <p>Because we build the foundation before the features. Most AI experiments fail because they start with a tool instead of starting with context. The tool doesn't know your business, so it gives generic outputs. Your team gets frustrated. The tool gets shelved. We start with your business knowledge captured and your systems connected. When AI has that foundation, it stops feeling like an experiment and starts feeling like infrastructure. That's why it sticks.</p>
+        </div></div></div>
       </div>
     </div>
   </div>
@@ -558,7 +670,7 @@
       <p><a href="mailto:marshall@infin8growth.ai">marshall@infin8growth.ai</a></p>
       <p><a href="mailto:hello@infin8growth.ai">hello@infin8growth.ai</a></p>
     </div>
-    <p class="coda">Or <a href="https://start.infin8growth.ai/start" class="fn-link-navy">start with a Foundation Assessment</a>. 30 minutes. We'll tell you honestly where you stand and what would move the needle first.</p>
+    <p class="coda">Or <a href="https://calendly.com/marshall-tuten/review-call" class="fn-link-navy">start with a Foundation Assessment</a>. 30 minutes. We'll tell you honestly where you stand and what would move the needle first.</p>
   </div>
 </section>
 
@@ -889,28 +1001,51 @@
       if (!stack.contains(e.relatedTarget)) clearActive();
     });
 
-    // Show Foundation Install (tier 0) by default when section comes into view
-    var shown = false;
-    function showDefault(){
-      if (shown) return;
-      shown = true;
-      setActive(0); // Show Foundation Install by default
+    // ===== Scroll-triggered one-time demo: bars light up in sequence =====
+    // Fires once when the stack enters view, then stays at rest.
+    var demoPlayed = false;
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var hint = document.getElementById('ffStackHint');
+
+    function playDemo(){
+      if (demoPlayed) return;
+      demoPlayed = true;
+      if (prefersReducedMotion) { if (hint) hint.classList.add('is-visible'); return; }
+      // Sequence: bottom (0) -> middle (1) -> top (2), each ~700ms, then clear.
+      var order = [0, 1, 2];
+      var step = 700;
+      order.forEach(function(tier, i){
+        setTimeout(function(){ setActive(tier); }, i * step);
+      });
+      // After the last one, fade it out and reveal the hint.
+      setTimeout(function(){
+        clearActive();
+        if (hint) hint.classList.add('is-visible');
+      }, order.length * step + 400);
     }
 
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function(entries){
         entries.forEach(function(e){
           if (e.isIntersecting && e.intersectionRatio >= 0.55) {
-            showDefault();
+            playDemo();
             io.disconnect();
           }
         });
       }, { threshold: [0, 0.55, 1] });
       io.observe(stack);
     } else {
-      // Fallback: show after short delay
-      setTimeout(showDefault, 800);
+      // Fallback: play after short delay
+      setTimeout(playDemo, 800);
     }
+
+    // If the user interacts before the demo triggers, cancel the hint reveal path
+    bars.forEach(function(b){
+      b.addEventListener('mouseenter', function(){
+        demoPlayed = true;
+        if (hint) hint.classList.remove('is-visible');
+      }, { once: true });
+    });
   })();
 
   // ===== Interactive Context diagram =====
@@ -958,103 +1093,16 @@
     document.body.style.overflow = '';
   }
 
-  // Newsletter subscription form handler
-  (function() {
-    const form = document.getElementById('subscribeForm');
-    const successDiv = document.getElementById('subscribeSuccess');
-    if (!form) return;
-
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      const emailInput = form.querySelector('input[name="email"]');
-      const firstNameInput = form.querySelector('input[name="firstName"]');
-      const companyInput = form.querySelector('input[name="company"]');
-      const button = form.querySelector('button');
-
-      const email = emailInput.value.trim();
-      const firstName = firstNameInput.value.trim();
-      const company = companyInput.value.trim();
-
-      // Validate required fields
-      if (!firstName) {
-        firstNameInput.focus();
-        return;
-      }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        emailInput.focus();
-        return;
-      }
-
-      const originalHTML = button.innerHTML;
-      button.disabled = true;
-      button.innerHTML = 'Subscribing...';
-
-      try {
-        const res = await fetch('/api/newsletter/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: email,
-            firstName: firstName,
-            company: company,
-            source: 'website'
-          })
-        });
-
-        if (res.ok) {
-          // Hide form, show success message
-          form.style.display = 'none';
-          successDiv.style.display = 'block';
-        } else {
-          throw new Error('Failed');
-        }
-      } catch (err) {
-        button.innerHTML = 'Try again';
-        button.disabled = false;
-        setTimeout(function() {
-          button.innerHTML = originalHTML;
-        }, 2000);
-      }
-    });
-  })();
-</script>
-
-<script>
-  // Tab attention: animate title when user leaves the tab
-  (function() {
-    var originalTitle = document.title;
-    var prefix = '👀 ';
-    var text = 'Foundation First...';
-    var chars = Array.from(text);
-    var index = 0;
-    var timer = null;
-
-    function type() {
-      index++;
-      if (index > chars.length) {
-        // Pause at full message, then restart
-        clearInterval(timer);
-        setTimeout(function() {
-          index = 0;
-          document.title = prefix;
-          timer = setInterval(type, 150);
-        }, 1500);
-      } else {
-        document.title = prefix + chars.slice(0, index).join('');
-      }
-    }
-
-    document.addEventListener('visibilitychange', function() {
-      if (document.hidden) {
-        index = 0;
-        document.title = prefix; // Show emoji immediately
-        timer = setInterval(type, 150);
-      } else {
-        clearInterval(timer);
-        timer = null;
-        document.title = originalTitle;
-      }
+  // ===== FAQ accordion =====
+  (function(){
+    var items = document.querySelectorAll('#faqList .faq-item');
+    items.forEach(function(item){
+      var btn = item.querySelector('.faq-q');
+      btn.addEventListener('click', function(){
+        var open = item.classList.contains('is-open');
+        items.forEach(function(o){ o.classList.remove('is-open'); o.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+        if (!open){ item.classList.add('is-open'); btn.setAttribute('aria-expanded','true'); }
+      });
     });
   })();
 </script>

@@ -2,9 +2,18 @@
 
 > Infin8 Growth builds AI operating systems for knowledge-based businesses. We help founders and leaders move from tool sprawl and pilot purgatory to an operating system that knows their business, built on their Company Brain, their connections, and their intelligent workflows.
 
+## Quick Links
+
+- [About Us](https://infin8growth.ai/about.html) - Meet Marshall Tuten and Louisa St. Aubyn
+- [How We Work](https://infin8growth.ai/work.html) - Our methodology and case studies
+- [Pricing](https://infin8growth.ai/pricing.html) - Foundation Install starts at $5,300
+- [FAQ](https://infin8growth.ai/faq.html) - Common questions about AI implementation
+- [Blog](https://infin8growth.ai/blog.html) - Articles on AI for knowledge-based businesses
+- [Book a Foundation Assessment](https://calendly.com/marshall-tuten/review-call) - 30-minute call to map your starting point
+
 ## Who we are
 
-Infin8 Growth is an AI implementation consultancy founded by Marshall Tuten (Co-Founder & CEO, East Coast US) and Louisa St. Aubyn (Co-Founder & CTO, West Coast US / Cornwall, UK). We build AI operating systems for businesses that run on knowledge, not point solutions or generic AI tools, but a complete operating layer built on each client's specific context, processes, and institutional knowledge.
+Infin8 Growth is an AI implementation consultancy founded by Marshall Tuten (Co-Founder & CEO, East Coast US) and Louisa St. Aubyn (Co-Founder & CTO, West Coast US / Cornwall, UK). We build AI operating systems for businesses that run on knowledge: not point solutions or generic AI tools, but a complete operating layer built on each client's specific context, processes, and institutional knowledge.
 
 We work with founders, operators, and senior leaders in hospitality & tourism, professional services (marketing and sales), custom software development, and digital businesses. We are based across the US and UK with an anchor partnership in Cornwall, England.
 
@@ -21,11 +30,35 @@ Intelligent systems built on your context and your connections. Enquiry triage t
 
 ## How we work: Foundation First
 
-Our methodology is called Foundation First. We build the knowledge infrastructure before the workflows, because AI built on a fragmented foundation produces generic, unreliable output that gets shelved. The Foundation Assessment identifies where your business loses the most time to knowledge gaps, disconnected tools, and manual overhead. Then we build:
+Our methodology is called Foundation First. We build the knowledge infrastructure before the workflows, because AI built on a fragmented foundation produces generic, unreliable output that gets shelved. The [Foundation Assessment](https://calendly.com/marshall-tuten/review-call) identifies where your business loses the most time to knowledge gaps, disconnected tools, and manual overhead. Then we build:
 
 1. **The Foundation**. Company Brain + connected systems. The groundwork everything else runs on.
 2. **The first workflow**. One intelligent system that solves a real problem and proves the platform works.
 3. **An ongoing partnership**. Maintenance, new workflows as your team finds new problems worth solving, workshops for going deeper.
+
+See our [Pricing page](https://infin8growth.ai/pricing.html) for Foundation Install packages and monthly retainer options.
+
+## Frequently Asked Questions
+
+**Q: How much does AI implementation cost for a small business?**
+A: The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Ongoing expansion runs $1,500-4,500/month. See full details on our [Pricing page](https://infin8growth.ai/pricing.html).
+
+**Q: How long does the Foundation Install take?**
+A: About two weeks. Week one builds your Context Layer through a guided session. Week two connects your tools and configures your first workflows. By day ten, you have a working system.
+
+**Q: What do I actually get from a Foundation Install?**
+A: A working AI Operating System: a Context Layer (10-15 files capturing how your business works), a Connections Layer (your tools wired together), and a Workflows Layer (2-3 automated processes running). Plus your team trained to use it.
+
+**Q: Do we need to fix our data before AI will work?**
+A: You don't need perfect data. You need captured knowledge. We build your institutional knowledge into the system in week one. Data cleanup happens naturally as the system runs.
+
+**Q: What's the difference between AI tools and an AI Operating System?**
+A: AI tools solve one problem at a time. An AI Operating System connects everything: your context, your software, and workflows that match how your team actually works. Tools sit on top. An Operating System becomes infrastructure.
+
+**Q: Can my team maintain the system after you leave?**
+A: Yes. We build AI capability, not dependency. After the install, your team knows how to use and extend the system. You own it, running on your accounts, with your data.
+
+For more questions, see our [FAQ page](https://infin8growth.ai/faq.html).
 
 ## Key concepts (entity definitions for AI indexing)
 
@@ -35,9 +68,11 @@ Our methodology is called Foundation First. We build the knowledge infrastructur
 
 **Foundation First**: Infin8 Growth's implementation methodology. Build the knowledge infrastructure (Company Brain + connections) before building workflows. Every subsequent intelligent system is faster and more accurate because the foundation is already there. Opposite of building point solutions on a fragmented base.
 
+**Foundation Install**: The entry-point engagement. A two-week implementation that delivers all three layers of the AI Operating System: Context, Connections, and Workflows. Pricing starts at $5,300 for teams of 1-10. [Learn more](https://infin8growth.ai/pricing.html).
+
 **Pilot purgatory**: The state most businesses find themselves in after initial AI experimentation: tools that work in isolation but don't compound, pilots that get shelved during busy season, experiments that don't translate to production impact. Foundation First is specifically designed to get businesses out of pilot purgatory.
 
-**Foundation Assessment**: Infin8 Growth's entry-point engagement. A 30-minute conversation that identifies where your business loses the most time to knowledge gaps, tool sprawl, and manual overhead, and maps the starting point for your AI operating system. Book at https://calendly.com/marshall-tuten/review-call.
+**Foundation Assessment**: A 30-minute conversation that identifies where your business loses the most time to knowledge gaps, tool sprawl, and manual overhead, and maps the starting point for your AI operating system. [Book here](https://calendly.com/marshall-tuten/review-call).
 
 **Institutional knowledge**: The knowledge that makes a business run: processes, decisions, client history, expertise, that typically lives in people's heads, inboxes, and disconnected tools. The Company Brain captures and makes this knowledge searchable and usable without requiring the person who holds it to be available.
 
@@ -45,7 +80,7 @@ Our methodology is called Foundation First. We build the knowledge infrastructur
 
 ## Industries we serve
 
-- **Hospitality & Tourism**: Heritage attractions, visitor experiences, museums, hotels, tourism operators. Emphasis on preserving institutional knowledge, managing seasonal complexity, and maintaining the human touch while handling operational overhead.
+- **Hospitality & Tourism**: Heritage attractions, visitor experiences, museums, hotels, tourism operators. Emphasis on preserving institutional knowledge, managing seasonal complexity, and maintaining the human touch while handling operational overhead. [Learn more](https://infin8growth.ai/work.html)
 - **Professional Services (Marketing & Sales)**: Marketing agencies, sales organisations, consulting firms. Emphasis on making accumulated client knowledge and past work searchable, eliminating repetitive proposal/reporting work, and reducing billable time lost to manual overhead.
 - **Custom Software Development**: Development firms building for clients. Emphasis on making architectural decisions and client-specific knowledge accessible, reducing the bus factor, and accelerating onboarding.
 - **Digital Businesses**: Course creators, online communities, content businesses, consulting practices. Emphasis on systematising the founder's methodology, scaling content and delivery without cloning the founder, and maintaining quality without proportional headcount growth.
@@ -57,16 +92,26 @@ Our methodology is called Foundation First. We build the knowledge infrastructur
 - We stay engaged through adoption, not just planning. We're measured by operational results, not reports delivered.
 - We build AI capability, not dependency. The goal is an organisation that owns and can extend its own AI operating system.
 - We carry the implementation burden. Our ICP doesn't have time to figure this out alongside running their business. We do the work; they develop the capability.
+- We publish real pricing. [See our pricing page](https://infin8growth.ai/pricing.html).
+
+## Founders
+
+**Marshall Tuten** - Co-Founder & CEO
+Commercial builder since 2012. Founded Infin8 Energy, built and scaled sales teams to $100M+ revenue. Leads client relationships, discovery calls, and commercial strategy. Based on the East Coast, US.
+[LinkedIn](https://www.linkedin.com/in/marshalltuten) · [YouTube](https://www.youtube.com/@MarshallTuten8)
+
+**Louisa St. Aubyn** - Co-Founder & CTO
+British surf competitor turned AI architect. Sets AI strategy and builds the technical architecture. Embedded work at St Michael's Mount in Cornwall is one of Infin8's live partner engagements. Based between Cornwall, UK and West Coast, US.
 
 ## Where to find us
 
-- Website: https://infin8growth.ai
-- Foundation Assessment (entry point): https://calendly.com/marshall-tuten/review-call
-- Field Notes (weekly newsletter): https://infin8growth.ai/#field-notes
-- Blog: https://infin8growth.ai/blog
+- Website: [https://infin8growth.ai](https://infin8growth.ai)
+- Foundation Assessment: [Book a 30-minute call](https://calendly.com/marshall-tuten/review-call)
+- Field Notes newsletter: [https://infin8growth.ai/#field-notes](https://infin8growth.ai/#field-notes)
+- Blog: [https://infin8growth.ai/blog.html](https://infin8growth.ai/blog.html)
+- FAQ: [https://infin8growth.ai/faq.html](https://infin8growth.ai/faq.html)
 - Email: hello@infin8growth.ai / marshall@infin8growth.ai / louisa@infin8growth.ai
-- Marshall Tuten on YouTube: https://www.youtube.com/@MarshallTuten8
-- LinkedIn: https://www.linkedin.com/company/infin8growth
+- LinkedIn: [https://www.linkedin.com/company/infin8growth](https://www.linkedin.com/company/infin8growth)
 
 ## Locations
 

@@ -21,10 +21,10 @@
    Uses the brand serif italic treatment already on the site.
    */
 .gold-accent {
-  color: #cc8f01;
+  color: var(--gold);
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.005em;
 }
 
@@ -172,8 +172,8 @@
 .layer-tab .tab-label em {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 700;
-  color: #cc8f01;
+  font-weight: 400;
+  color: var(--gold);
 }
 .layer-tab .tab-marker {
   width: 24px;
@@ -245,8 +245,8 @@
 .layer-slide h3 em {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 700;
-  color: #cc8f01;
+  font-weight: 400;
+  color: var(--gold);
 }
 .layer-slide .lead {
   font-family: var(--serif);
@@ -928,4 +928,173 @@
     margin-top: 20px;
     text-align: right;
   }
+}
+
+/* ============================================================
+   FAQ — accordion (shared: homepage section + faq.html)
+   ============================================================ */
+.faq .section-head { margin-bottom: 8px; }
+.faq .section-head .right p { max-width: 460px; }
+.faq-viewall {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.faq-viewall:hover { color: var(--gold); border-bottom-color: var(--navy); }
+
+.faq-list {
+  margin-top: 56px;
+  border-top: 1px solid var(--rule-navy);
+}
+.faq-item { border-bottom: 1px solid var(--rule-navy); }
+.faq-q {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  color: var(--navy);
+  padding: 28px 0;
+}
+.faq-q-text {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(18px, 1.7vw, 22px);
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  transition: color 180ms ease;
+}
+.faq-q:hover .faq-q-text { color: var(--deep-gold); }
+.faq-item.is-open .faq-q-text { color: var(--navy); }
+.faq-icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-navy);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 260ms ease, background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+.faq-q:hover .faq-icon { border-color: var(--gold); }
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+.faq-a {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 380ms ease;
+}
+.faq-item.is-open .faq-a { max-height: 680px; }
+.faq-a > div { min-height: 0; }
+.faq-a-inner {
+  padding: 0 0 32px;
+  max-width: 760px;
+}
+.faq-a-inner p {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.55;
+  color: var(--navy);
+  margin: 0;
+  opacity: 0.92;
+}
+.faq-a-inner p strong { font-family: var(--sans); font-weight: 600; }
+
+/* Dedicated FAQ page */
+.faq-page-hero { padding-top: 140px; padding-bottom: 8px; }
+.faq-page-hero h1 {
+  font-size: clamp(44px, 6.4vw, 80px);
+  margin: 16px 0 24px;
+}
+.faq-page-hero .lede {
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.45;
+  color: var(--navy);
+  max-width: 720px;
+  margin: 0;
+}
+.faq-group { margin-top: 64px; }
+.faq-group:first-of-type { margin-top: 40px; }
+.faq-group-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--gold);
+}
+.faq-group-head .faq-group-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--gold);
+  line-height: 1;
+}
+.faq-group-head h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(24px, 2.6vw, 34px);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 0;
+}
+.faq-group-head h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.faq-group .faq-list { margin-top: 0; border-top: 0; }
+
+.faq-cta {
+  margin-top: 88px;
+  padding: 56px 64px;
+  background: var(--navy);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.faq-cta .faq-cta-copy { max-width: 520px; }
+.faq-cta h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--light-text);
+  margin: 0 0 12px;
+}
+.faq-cta h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--gold); }
+.faq-cta p {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.45;
+  color: var(--muted-cream);
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .faq-cta { padding: 40px 28px; flex-direction: column; align-items: flex-start; }
+  .faq-q { gap: 18px; padding: 24px 0; }
 }

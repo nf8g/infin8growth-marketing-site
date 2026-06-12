@@ -1,0 +1,116 @@
+{
+  "$schema": "https://schemas.agent-protocol.ai/agent.json",
+  "name": "Infin8 Growth",
+  "description": "AI Operating System implementation for knowledge-based businesses. We build the foundation (context, connections, workflows) before the features. Foundation Install in two weeks, starting at $5,300.",
+  "url": "https://infin8growth.ai",
+  "logo": "https://infin8growth.ai/assets/logo.png",
+  "contactEmail": "hello@infin8growth.ai",
+  "provider": {
+    "name": "Infin8 Growth",
+    "url": "https://infin8growth.ai"
+  },
+  "capabilities": [
+    {
+      "name": "Foundation Assessment",
+      "description": "30-minute discovery call to identify where your business loses time to knowledge gaps, tool sprawl, and manual overhead. Maps your starting point for an AI Operating System.",
+      "type": "consultation",
+      "url": "https://calendly.com/marshall-tuten/review-call",
+      "pricing": "Free"
+    },
+    {
+      "name": "Foundation Install",
+      "description": "Two-week implementation delivering a complete AI Operating System: Context Layer (your business knowledge captured), Connections Layer (your tools wired together), and Workflows Layer (2-3 automated processes running).",
+      "type": "implementation",
+      "url": "https://infin8growth.ai/pricing.html",
+      "pricing": "Starting at $5,300 for teams of 1-10"
+    },
+    {
+      "name": "OS Expansion - Sustain",
+      "description": "Monthly retainer where we maintain your AI Operating System and add new capabilities each month. You use it; we grow it.",
+      "type": "ongoing_service",
+      "url": "https://infin8growth.ai/pricing.html",
+      "pricing": "$1,500/month"
+    },
+    {
+      "name": "OS Expansion - Train",
+      "description": "Monthly retainer with hands-on training sessions. We develop AI champions on your team who can extend the system independently.",
+      "type": "training",
+      "url": "https://infin8growth.ai/pricing.html",
+      "pricing": "$3,000/month"
+    },
+    {
+      "name": "OS Expansion - Partner",
+      "description": "Embedded partnership for complex operations. Full discovery, SOP digitization, custom workflow architecture, and change management.",
+      "type": "embedded_partnership",
+      "url": "https://infin8growth.ai/pricing.html",
+      "pricing": "$4,500/month (invite-only)"
+    }
+  ],
+  "industries": [
+    "Hospitality & Tourism",
+    "Professional Services",
+    "Custom Software Development",
+    "Digital Businesses",
+    "Heritage Sites & Museums",
+    "Marketing Agencies",
+    "Consulting Firms"
+  ],
+  "serviceAreas": [
+    "United States",
+    "United Kingdom"
+  ],
+  "locations": [
+    {
+      "name": "East Coast US",
+      "type": "primary"
+    },
+    {
+      "name": "West Coast US",
+      "type": "primary"
+    },
+    {
+      "name": "Cornwall, UK",
+      "type": "anchor_partnership"
+    },
+    {
+      "name": "London, UK",
+      "type": "secondary"
+    }
+  ],
+  "team": [
+    {
+      "name": "Marshall Tuten",
+      "role": "Co-Founder & CEO",
+      "description": "Commercial builder since 2012. Leads client relationships, discovery calls, and commercial strategy.",
+      "linkedin": "https://www.linkedin.com/in/marshalltuten",
+      "youtube": "https://www.youtube.com/@MarshallTuten8"
+    },
+    {
+      "name": "Louisa St. Aubyn",
+      "role": "Co-Founder & CTO",
+      "description": "AI architect. Sets AI strategy and builds technical architecture. Leads embedded partner engagements."
+    }
+  ],
+  "methodology": {
+    "name": "Foundation First",
+    "description": "Build the knowledge infrastructure before the workflows. Context Layer + Connections Layer + Workflows Layer. Every subsequent system is faster and more accurate because the foundation is already there."
+  },
+  "differentiators": [
+    "We build operating systems, not point solutions",
+    "Foundation First methodology: knowledge infrastructure before workflows",
+    "We stay engaged through adoption, not just planning",
+    "We build AI capability, not dependency",
+    "We publish real pricing",
+    "Two-week implementation, not multi-month consulting engagements"
+  ],
+  "links": {
+    "website": "https://infin8growth.ai",
+    "booking": "https://calendly.com/marshall-tuten/review-call",
+    "pricing": "https://infin8growth.ai/pricing.html",
+    "faq": "https://infin8growth.ai/faq.html",
+    "blog": "https://infin8growth.ai/blog.html",
+    "about": "https://infin8growth.ai/about.html",
+    "work": "https://infin8growth.ai/work.html",
+    "linkedin": "https://www.linkedin.com/company/infin8growth"
+  }
+}

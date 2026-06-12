@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://infin8growth.ai/#marshall-tuten",
+  "name": "Marshall Tuten",
+  "givenName": "Marshall",
+  "familyName": "Tuten",
+  "jobTitle": "Co-Founder & CEO",
+  "description": "Commercial builder since 2012. Co-Founder of Infin8 Growth, building AI Operating Systems for knowledge-based businesses. Previously founded Infin8 Energy, scaling sales teams to $100M+ revenue. Leads client relationships and commercial strategy.",
+  "url": "https://infin8growth.ai/about.html",
+  "image": "https://infin8growth.ai/assets/marshall-tuten.jpg",
+  "sameAs": [
+    "https://www.linkedin.com/in/marshalltuten",
+    "https://www.youtube.com/@MarshallTuten8"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://infin8growth.ai/#org",
+    "name": "Infin8 Growth",
+    "url": "https://infin8growth.ai"
+  },
+  "founder": {
+    "@type": "Organization",
+    "@id": "https://infin8growth.ai/#org"
+  },
+  "knowsAbout": [
+    "AI Operating Systems",
+    "AI Implementation",
+    "Business Operations",
+    "Sales Leadership",
+    "Knowledge Management",
+    "Foundation First Methodology",
+    "Small Business AI Strategy"
+  ],
+  "alumniOf": {
+    "@type": "Organization",
+    "name": "Infin8 Energy"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "East Coast",
+    "addressCountry": "US"
+  }
+}

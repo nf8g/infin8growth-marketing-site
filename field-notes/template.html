@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- REPLACE: Title and meta description -->
+<title>{{TITLE}} | Field Notes | Infin8 Growth</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{TITLE}} | Field Notes">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:image" content="/assets/og/field-notes.png">
+<meta property="og:url" content="https://infin8growth.ai/field-notes/{{SLUG}}.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://infin8growth.ai/field-notes/{{SLUG}}.html">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YTS35YGLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8YTS35YGLZ');
+</script>
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{TITLE}}",
+  "description": "{{META_DESCRIPTION}}",
+  "author": {
+    "@type": "Person",
+    "@id": "https://infin8growth.ai/#marshall-tuten",
+    "name": "Marshall Tuten",
+    "url": "https://infin8growth.ai/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://infin8growth.ai/#org",
+    "name": "Infin8 Growth",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://infin8growth.ai/assets/logo.png"
+    }
+  },
+  "datePublished": "{{DATE_ISO}}",
+  "dateModified": "{{DATE_ISO}}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://infin8growth.ai/field-notes/{{SLUG}}.html"
+  },
+  "image": "https://infin8growth.ai/assets/og/field-notes.png",
+  "keywords": "{{KEYWORDS}}",
+  "articleSection": "Field Notes"
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/upgrades.css">
+</head>
+<body>
+
+<!-- NAV (copy from index.html) -->
+<header class="nav">
+  <div class="container">
+    <a href="/index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="top">
+      <ul>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/field-notes/">Field Notes</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<article class="field-note">
+  <div class="container">
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <p class="article-meta">
+        <span class="article-category">Field Notes</span>
+        <span class="article-date">{{DATE_DISPLAY}}</span>
+      </p>
+      <h1>{{TITLE}}</h1>
+      <p class="article-byline">By Marshall Tuten</p>
+    </header>
+
+    <!-- Article Content -->
+    <div class="article-content">
+
+      {{CONTENT}}
+
+    </div>
+
+    <!-- CTA Section -->
+    <section class="article-cta">
+      <h2>Want the full version?</h2>
+      <p>This is the website edition. For the complete Field Notes with deeper context and examples, subscribe on Substack.</p>
+      <div class="cta-buttons">
+        <a href="{{SUBSTACK_POST_URL}}" class="btn btn-primary">Read Full Post on Substack →</a>
+        <a href="https://infin8growth.substack.com/subscribe" class="btn btn-secondary">Subscribe to Field Notes</a>
+      </div>
+      <p class="cta-note">Free, weekly. No spam. Unsubscribe anytime.</p>
+    </section>
+
+    <!-- Related Content -->
+    <section class="article-related">
+      <h3>Related</h3>
+      <ul>
+        <!-- Add 2-3 related posts or pages -->
+        <li><a href="/faq.html">FAQ: Common questions about AI implementation</a></li>
+        <li><a href="/pricing.html">Foundation Install pricing</a></li>
+      </ul>
+    </section>
+
+  </div>
+</article>
+
+<!-- FOOTER (copy from index.html) -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Infin8 Growth. All rights reserved.</p>
+    <p><a href="/privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
