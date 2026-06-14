@@ -963,9 +963,8 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
 .post-meta .tag { color: var(--seafoam); font-weight: 600; text-transform: uppercase; }
 
 .post-body {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 64px var(--pad-x);
+  padding: 48px var(--pad-x) 64px;
+  background: var(--cream);
 }
 .post-body p { font-size: 18px; line-height: 1.75; margin-bottom: 1.4em; }
 .post-body h2 { font-size: 32px; margin-top: 56px; margin-bottom: 20px; }
@@ -974,7 +973,7 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
 .post-body li { font-size: 18px; line-height: 1.7; margin-bottom: 0.5em; }
 
 .post-faq {
-  max-width: 720px;
+  max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--pad-x) 80px;
   border-top: 1px solid var(--rule-navy);

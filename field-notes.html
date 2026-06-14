@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field Notes · Infin8 Growth · AI Operating Systems</title>
+<meta name="description" content="Field Notes from Infin8 Growth. A weekly letter on AI implementation for knowledge-based businesses. What's being tried, what's working, what isn't.">
+<!-- Open Graph -->
+<meta property="og:title" content="Field Notes · Infin8 Growth">
+<meta property="og:description" content="A weekly letter on AI implementation for knowledge-based businesses. What's being tried, what's working, what isn't.">
+<meta property="og:image" content="/assets/og/home.png">
+<meta property="og:url" content="https://infin8growth.ai/field-notes.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://infin8growth.ai/field-notes.html">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YTS35YGLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8YTS35YGLZ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/upgrades.css">
+<style>
+  /* ── FIELD NOTES PAGE ─────────────────────────────── */
+  .fn-hero { padding-top: 140px; padding-bottom: 48px; }
+  .fn-hero h1 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(44px, 6.4vw, 88px);
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    margin: 16px 0 24px;
+    max-width: 960px;
+  }
+  .fn-hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .fn-hero .lede {
+    font-family: var(--serif);
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1.45;
+    color: var(--navy);
+    max-width: 760px;
+    margin: 0;
+  }
+
+  .fn-archive { padding-top: 0; padding-bottom: 96px; }
+  .fn-archive .archive-masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+    margin-bottom: 0;
+  }
+  .fn-archive .archive-masthead .title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--navy);
+  }
+  .fn-archive .archive-masthead .meta {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.5;
+  }
+
+  .fn-list { list-style: none; padding: 0; margin: 0; }
+  .fn-list .fn-item {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 24px;
+    align-items: start;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule-cream, rgba(10, 35, 66, 0.14));
+    text-decoration: none;
+    color: inherit;
+    transition: background 180ms ease;
+  }
+  .fn-list a.fn-item:hover { background: rgba(241, 181, 55, 0.06); margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+  .fn-list .fn-item .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 32px;
+    color: var(--gold, #a88242);
+    line-height: 1;
+  }
+  .fn-list .fn-item .content { }
+  .fn-list .fn-item .title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.25;
+    color: var(--navy);
+    margin: 0 0 8px;
+  }
+  .fn-list .fn-item .title em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .fn-list .fn-item .dek {
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--navy);
+    opacity: 0.75;
+    margin: 0;
+    max-width: 56ch;
+  }
+  .fn-list .fn-item .date {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.5;
+    white-space: nowrap;
+  }
+  .fn-list .fn-item .date .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--navy);
+    opacity: 0.3;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .fn-list .fn-item .date .dot--live {
+    background: var(--seafoam, #4A9B8E);
+    opacity: 1;
+  }
+  .fn-list .fn-item--placeholder {
+    opacity: 0.5;
+  }
+
+  .fn-subscribe {
+    margin-top: 64px;
+    padding: 48px;
+    background: var(--navy, #0a2342);
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .fn-subscribe .left .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold, #e6a93a);
+    margin: 0 0 12px;
+  }
+  .fn-subscribe .left h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.25;
+    color: var(--light-text, #e8e4dc);
+    margin: 0;
+  }
+  .fn-subscribe .right { }
+  .fn-subscribe .right .note {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--light-text, #e8e4dc);
+    opacity: 0.6;
+    margin: 12px 0 0;
+  }
+
+  @media (max-width: 768px) {
+    .fn-list .fn-item { grid-template-columns: 40px 1fr; gap: 16px; }
+    .fn-list .fn-item .date { grid-column: 2; margin-top: 8px; }
+    .fn-list .fn-item .num { font-size: 24px; }
+    .fn-subscribe { grid-template-columns: 1fr; gap: 32px; padding: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="top">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="field-notes.html" class="active">Field Notes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="about.html" onclick="closeDrawer()">About</a></li>
+    <li><a href="work.html" onclick="closeDrawer()">Work</a></li>
+    <li><a href="pricing.html" onclick="closeDrawer()">Pricing</a></li>
+    <li><a href="field-notes.html" onclick="closeDrawer()">Field Notes</a></li>
+    <li><a href="faq.html" onclick="closeDrawer()">FAQ</a></li>
+    <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
+  </ul>
+  <div class="drawer-cta">
+    <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="cream fn-hero">
+  <div class="container">
+    <span class="eyebrow">The newsletter</span>
+    <h1><em>Field</em> Notes</h1>
+    <p class="lede">A weekly letter on AI implementation for knowledge-based businesses. What's being tried, what's working, what isn't. Real examples from the businesses we work with, and things you can try yourself.</p>
+  </div>
+</section>
+
+<!-- ============ ARCHIVE ============ -->
+<section class="cream fn-archive">
+  <div class="container">
+    <div class="archive-masthead">
+      <span class="title"><em>The archive</em></span>
+      <span class="meta">Vol. I · Est. 2026</span>
+    </div>
+
+    <ul class="fn-list">
+      <a href="field-notes/the-1-reason-ai-isnt-working.html" class="fn-item">
+        <span class="num">03</span>
+        <div class="content">
+          <h3 class="title"><em>The #1 Reason</em> AI Isn't Working</h3>
+          <p class="dek">Tools and prompting can only take you so far. The real challenge starts with you.</p>
+        </div>
+        <span class="date"><span class="dot dot--live"></span>June 2026</span>
+      </a>
+      <a href="field-notes/youre-already-paying-for-ai.html" class="fn-item">
+        <span class="num">02</span>
+        <div class="content">
+          <h3 class="title"><em>You're Already Paying</em> for AI</h3>
+          <p class="dek">Chaos has a price tag. Your business is already spending on time, money, attention, and energy. Here's what it's costing you.</p>
+        </div>
+        <span class="date"><span class="dot dot--live"></span>May 2026</span>
+      </a>
+      <a href="field-notes/people-first-ai-adoption.html" class="fn-item">
+        <span class="num">01</span>
+        <div class="content">
+          <h3 class="title"><em>People-First</em> AI Adoption</h3>
+          <p class="dek">What we've learned about change management from embedding AI in a 400,000-visitor heritage attraction.</p>
+        </div>
+        <span class="date"><span class="dot dot--live"></span>May 2026</span>
+      </a>
+    </ul>
+
+    <div class="fn-subscribe">
+      <div class="left">
+        <p class="eyebrow">Subscribe</p>
+        <h3>One issue a week.<br>Free, always.</h3>
+      </div>
+      <div class="right">
+        <iframe src="https://marshalltuten.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white;" frameborder="0" scrolling="no"></iframe>
+        <p class="note">Delivered via Substack. No spam, unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <a href="index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="bottom">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@MarshallTuten8" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/company/infin8growth" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/infin8growth" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <span class="meta">CORNWALL · LONDON · EAST COAST · WEST COAST</span>
+    <span class="meta" style="margin-top: 8px;"><a href="/privacy.html" style="color: inherit; opacity: 0.6; text-decoration: none;">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('navDrawer');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    drawer.classList.toggle('open');
+    document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+  });
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+
+</body>
+</html>
