@@ -8,7 +8,7 @@
 - [How We Work](https://infin8growth.ai/work.html) - Our methodology and case studies
 - [Pricing](https://infin8growth.ai/pricing.html) - Foundation Install starts at $5,300
 - [FAQ](https://infin8growth.ai/faq.html) - Common questions about AI implementation
-- [Blog](https://infin8growth.ai/blog.html) - Articles on AI for knowledge-based businesses
+- [Field Notes](https://infin8growth.ai/field-notes.html) - Weekly insights on AI implementation
 - [Book a Foundation Assessment](https://calendly.com/marshall-tuten/review-call) - 30-minute call to map your starting point
 
 ## Who we are
@@ -107,8 +107,7 @@ British surf competitor turned AI architect. Sets AI strategy and builds the tec
 
 - Website: [https://infin8growth.ai](https://infin8growth.ai)
 - Foundation Assessment: [Book a 30-minute call](https://calendly.com/marshall-tuten/review-call)
-- Field Notes newsletter: [https://infin8growth.ai/#field-notes](https://infin8growth.ai/#field-notes)
-- Blog: [https://infin8growth.ai/blog.html](https://infin8growth.ai/blog.html)
+- Field Notes: [https://infin8growth.ai/field-notes.html](https://infin8growth.ai/field-notes.html)
 - FAQ: [https://infin8growth.ai/faq.html](https://infin8growth.ai/faq.html)
 - Email: hello@infin8growth.ai / marshall@infin8growth.ai / louisa@infin8growth.ai
 - LinkedIn: [https://www.linkedin.com/company/infin8growth](https://www.linkedin.com/company/infin8growth)
