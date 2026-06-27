@@ -55,7 +55,7 @@ Create a dedicated FAQ page with **all 12 questions**.
 
 ### Q1: How much does AI implementation cost for a small business?
 
-The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it.
+The Foundation Install starts at $5,600 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it.
 
 ---
 
@@ -109,7 +109,7 @@ AI tools solve one problem at a time. An AI Operating System connects everything
 
 **Q4: How much does AI implementation cost for a small business?**
 
-The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it.
+The Foundation Install starts at $5,600 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it.
 
 ---
 
@@ -179,7 +179,7 @@ Add this to the homepage `<head>`:
       "name": "How much does AI implementation cost for a small business?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it."
+        "text": "The Foundation Install starts at $5,600 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it."
       }
     },
     {
@@ -256,7 +256,7 @@ Add this to the FAQ page `<head>`:
       "name": "How much does AI implementation cost for a small business?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it."
+        "text": "The Foundation Install starts at $5,600 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Larger teams are scoped on a discovery call. After the install, ongoing expansion runs $1,500-4,500/month depending on whether you want us to maintain it, train your team, or stay embedded as a partner. We publish real numbers because you shouldn't have to book a call just to know if you can afford it."
       }
     },
     {

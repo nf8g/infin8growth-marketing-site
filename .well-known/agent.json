@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.agent-protocol.ai/agent.json",
   "name": "Infin8 Growth",
-  "description": "AI Operating System implementation for knowledge-based businesses. We build the foundation (context, connections, workflows) before the features. Foundation Install in two weeks, starting at $5,300.",
+  "description": "AI Operating System implementation for knowledge-based businesses. We build the foundation (context, connections, workflows) before the features. Foundation Install in two weeks, starting at $5,600.",
   "url": "https://infin8growth.ai",
   "logo": "https://infin8growth.ai/assets/logo.png",
   "contactEmail": "hello@infin8growth.ai",
@@ -22,7 +22,7 @@
       "description": "Two-week implementation delivering a complete AI Operating System: Context Layer (your business knowledge captured), Connections Layer (your tools wired together), and Workflows Layer (2-3 automated processes running).",
       "type": "implementation",
       "url": "https://infin8growth.ai/pricing.html",
-      "pricing": "Starting at $5,300 for teams of 1-10"
+      "pricing": "Starting at $5,600 for teams of 1-10"
     },
     {
       "name": "OS Expansion - Sustain",

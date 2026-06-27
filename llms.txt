@@ -6,7 +6,7 @@
 
 - [About Us](https://infin8growth.ai/about.html) - Meet Marshall Tuten and Louisa St. Aubyn
 - [How We Work](https://infin8growth.ai/work.html) - Our methodology and case studies
-- [Pricing](https://infin8growth.ai/pricing.html) - Foundation Install starts at $5,300
+- [Pricing](https://infin8growth.ai/pricing.html) - Foundation Install starts at $5,600
 - [FAQ](https://infin8growth.ai/faq.html) - Common questions about AI implementation
 - [Field Notes](https://infin8growth.ai/field-notes.html) - Weekly insights on AI implementation
 - [Book a Foundation Assessment](https://calendly.com/marshall-tuten/review-call) - 30-minute call to map your starting point
@@ -41,7 +41,7 @@ See our [Pricing page](https://infin8growth.ai/pricing.html) for Foundation Inst
 ## Frequently Asked Questions
 
 **Q: How much does AI implementation cost for a small business?**
-A: The Foundation Install starts at $5,300 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Ongoing expansion runs $1,500-4,500/month. See full details on our [Pricing page](https://infin8growth.ai/pricing.html).
+A: The Foundation Install starts at $5,600 for teams of 1-10 people. That's a flat fee for a complete AI Operating System: your context captured, your tools connected, and 2-3 workflows running. Ongoing expansion runs $1,500-4,500/month. See full details on our [Pricing page](https://infin8growth.ai/pricing.html).
 
 **Q: How long does the Foundation Install take?**
 A: About two weeks. Week one builds your Context Layer through a guided session. Week two connects your tools and configures your first workflows. By day ten, you have a working system.
@@ -68,7 +68,7 @@ For more questions, see our [FAQ page](https://infin8growth.ai/faq.html).
 
 **Foundation First**: Infin8 Growth's implementation methodology. Build the knowledge infrastructure (Company Brain + connections) before building workflows. Every subsequent intelligent system is faster and more accurate because the foundation is already there. Opposite of building point solutions on a fragmented base.
 
-**Foundation Install**: The entry-point engagement. A two-week implementation that delivers all three layers of the AI Operating System: Context, Connections, and Workflows. Pricing starts at $5,300 for teams of 1-10. [Learn more](https://infin8growth.ai/pricing.html).
+**Foundation Install**: The entry-point engagement. A two-week implementation that delivers all three layers of the AI Operating System: Context, Connections, and Workflows. Pricing starts at $5,600 for teams of 1-10. [Learn more](https://infin8growth.ai/pricing.html).
 
 **Pilot purgatory**: The state most businesses find themselves in after initial AI experimentation: tools that work in isolation but don't compound, pilots that get shelved during busy season, experiments that don't translate to production impact. Foundation First is specifically designed to get businesses out of pilot purgatory.
 

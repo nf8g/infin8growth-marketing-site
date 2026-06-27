@@ -1037,6 +1037,29 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
 .policy-body h2 { font-size: 28px; margin-top: 48px; }
 .policy-body p, .policy-body li { font-size: 16px; line-height: 1.75; }
 
+/* ── PARTNER BADGE (Hero) ───────────────────────────── */
+.hero .container {
+  position: relative;
+}
+.hero .partner-badge {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  z-index: 10;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.hero .partner-badge:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.hero .partner-logo {
+  height: 91px;
+  width: auto;
+  display: block;
+}
+
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 1024px) {
   :root { --pad-x: 40px; --pad-y: 110px; }
@@ -1046,6 +1069,8 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
   .bio-grid { grid-template-columns: 1fr; gap: 56px; }
   .post-grid { grid-template-columns: 1fr; }
   .media-channels { grid-template-columns: 1fr; }
+  .hero .partner-badge { top: -30px; }
+  .hero .partner-logo { height: 63px; }
 }
 @media (max-width: 720px) {
   :root { --pad-x: 24px; --pad-y: 88px; }
@@ -1063,4 +1088,6 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
   .subscribe { flex-direction: column; }
   .post-body, .post-faq { padding-left: var(--pad-x); padding-right: var(--pad-x); }
   .where .grid { gap: 40px; }
+  .hero .partner-badge { top: -20px; }
+  .hero .partner-logo { height: 42px; }
 }
