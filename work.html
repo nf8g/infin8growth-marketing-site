@@ -43,7 +43,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main.css?v=6">
 </head>
 <body>
 
@@ -87,18 +87,49 @@
     <span class="eyebrow">Case Studies</span>
     <h1>The work, <em>in practice</em></h1>
     <p style="font-family: var(--serif); font-size: clamp(20px, 1.8vw, 26px); line-height: 1.55; max-width: 680px; margin: 0;">
-      Same Foundation First framework. Very different businesses. That's the point: an AI operating system built on your Company Brain works in ways that generic tools never can. Until you see your industry reflected in the work, it's hard to believe. So here it is.
+      Same Foundation First framework. Very different businesses. An AI operating system built on your Company knowledge works in ways that generic tools never can. Until you see your industry reflected in the work, it's hard to believe.
     </p>
+  </div>
+</section>
+
+<!-- ============ INDUSTRY GRID ============ -->
+<section class="cream industry-grid-section">
+  <div class="container">
+    <div class="industry-grid">
+
+      <!-- Heritage and Visitor Attractions -->
+      <button class="industry-card" type="button" data-industry="heritage" aria-expanded="false">
+        <div class="industry-card-header">
+          <span class="industry-name">Heritage and Visitor Attractions</span>
+          <span class="industry-icon" aria-hidden="true">+</span>
+        </div>
+        <div class="industry-image">
+          <img src="assets/state-of-play-cornwall.jpg" alt="St. Aubyn Estates Cornwall" loading="lazy">
+        </div>
+      </button>
+
+      <!-- Team Operations & Logistics -->
+      <button class="industry-card" type="button" data-industry="logistics" aria-expanded="false">
+        <div class="industry-card-header">
+          <span class="industry-name">Team Operations & Logistics</span>
+          <span class="industry-icon" aria-hidden="true">+</span>
+        </div>
+        <div class="industry-image">
+          <img src="assets/warehouse-logistics.jpg" alt="Operations & Logistics" loading="lazy">
+        </div>
+      </button>
+
+    </div>
   </div>
 </section>
 
 <!-- Industry navigation -->
 
-<!-- ============ HOSPITALITY & TOURISM ============ -->
-<section class="cream" id="hospitality" style="padding-top: 64px;">
+<!-- ============ HERITAGE & VISITOR ATTRACTIONS ============ -->
+<section class="cream case-study-section" id="heritage" data-industry="heritage">
   <div class="container">
     <div class="case-study">
-      <span class="industry-tag">Hospitality &amp; Tourism</span>
+      <span class="industry-tag">Heritage and Visitor Attractions</span>
       <p class="outcome">A 400k+ visitor heritage attraction built a Company Brain across the entire estate, and half of all visitors started using the first workflow within weeks of launch.</p>
       <div class="story">
         <p>St. Aubyn Estates in Cornwall manages one of the UK's most complex heritage visitor experiences. Multiple teams, layered history, operations that span hospitality, conservation, events, and retail. The kind of organisation where institutional knowledge lives in long-tenured staff, and walks out the door when they leave.</p>
@@ -111,6 +142,19 @@
         <p>"Infin8 Growth delivered during the Foundation Install and it's working exactly as intended. Marshall and Louisa made the technology useful without overcomplicating things. They understood our business quickly and helped us to understand the areas that have the best potential for AI application. We're really excited about the progress being made and feel that, together with Infin8 Growth, we are ahead of where our competitors are at right now."</p>
         <cite>— Duncan M., St. Aubyn Estates</cite>
       </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPERATIONS & LOGISTICS ============ -->
+<section class="cream case-study-section" id="logistics" data-industry="logistics">
+  <div class="container">
+    <div class="case-study">
+      <span class="industry-tag">Team Operations &amp; Logistics</span>
+      <p class="outcome">[Placeholder: User will provide outcome summary]</p>
+      <div class="story">
+        <p>[Placeholder: User will provide case study story and details]</p>
+      </div>
     </div>
   </div>
 </section>
@@ -175,6 +219,41 @@
     drawer.classList.remove('open');
     document.body.style.overflow = '';
   }
+
+  // Industry card toggle
+  (function(){
+    var cards = document.querySelectorAll('.industry-card');
+    var sections = document.querySelectorAll('.case-study-section');
+
+    cards.forEach(function(card){
+      card.addEventListener('click', function(){
+        var industry = card.getAttribute('data-industry');
+        var section = document.getElementById(industry);
+        var isActive = card.classList.contains('is-active');
+
+        // Close all
+        cards.forEach(function(c){
+          c.classList.remove('is-active');
+          c.setAttribute('aria-expanded', 'false');
+        });
+        sections.forEach(function(s){
+          s.classList.remove('is-visible');
+        });
+
+        // Open clicked (if not already active)
+        if (!isActive && section) {
+          card.classList.add('is-active');
+          card.setAttribute('aria-expanded', 'true');
+          section.classList.add('is-visible');
+
+          // Smooth scroll to section
+          setTimeout(function(){
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      });
+    });
+  })();
 </script>
 
 </body>
