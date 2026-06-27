@@ -317,6 +317,59 @@ nav.top a.active::after { transform: scaleX(1); }
 }
 .hero .ctas { justify-content: center; }
 
+/* Hero Rotating Quotes */
+.hero-quotes {
+  margin: 40px auto 0;
+  max-width: 900px;
+  background: var(--navy);
+  border-radius: 4px;
+  padding: 40px 48px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.quote-slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+.quote-slide.active {
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
+}
+
+.quote-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+  color: var(--light-text);
+  margin: 0 0 12px;
+}
+
+.quote-author {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-style: normal;
+}
+
 /* ── FOUNDATION FIRST mark — animated gold underline ── */
 .fn-mark {
   position: relative;
@@ -762,11 +815,12 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
 
 /* ── PAGE HERO (inner pages) ────────────────────────── */
 .page-hero {
-  padding-top: 120px;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 32px;
+  text-align: center;
 }
 .page-hero .eyebrow { display: block; margin-bottom: 24px; }
-.page-hero h1 { font-size: clamp(40px, 5vw, 72px); }
+.page-hero h1 { font-size: clamp(40px, 5vw, 72px); margin-left: auto; margin-right: auto; }
 
 /* ── CASE STUDIES ───────────────────────────────────── */
 .industry-nav {
@@ -1037,6 +1091,111 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
 .policy-body h2 { font-size: 28px; margin-top: 48px; }
 .policy-body p, .policy-body li { font-size: 16px; line-height: 1.75; }
 
+/* ── INDUSTRY GRID (Work Page) ──────────────────────── */
+.industry-grid-section {
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+.industry-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.industry-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.333% - 16px);
+  max-width: 380px;
+  border: 1px solid var(--rule-navy);
+  border-radius: 2px;
+  background: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  transition: border-color 200ms ease, transform 200ms ease;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.industry-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.industry-card.is-active {
+  border-color: var(--gold);
+}
+
+.industry-card-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--rule-navy);
+}
+
+.industry-name {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.industry-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transition: transform 200ms ease;
+  color: var(--navy);
+}
+
+.industry-card.is-active .industry-icon {
+  transform: rotate(45deg);
+}
+
+.industry-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.industry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.industry-card:hover .industry-image img {
+  transform: scale(1.05);
+}
+
+/* Case study sections - expandable */
+.case-study-section {
+  padding-top: 12px;
+  padding-bottom: 64px;
+  display: none;
+}
+
+.case-study-section.is-visible {
+  display: block;
+}
+
 /* ── PARTNER BADGE (Hero) ───────────────────────────── */
 .hero .container {
   position: relative;
@@ -1071,10 +1230,12 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
   .media-channels { grid-template-columns: 1fr; }
   .hero .partner-badge { top: -30px; }
   .hero .partner-logo { height: 63px; }
+  .industry-card { flex: 0 0 calc(50% - 12px); }
 }
 @media (max-width: 720px) {
   :root { --pad-x: 24px; --pad-y: 88px; }
   .hero { padding-top: 72px; padding-bottom: 72px; }
+  .hero-quotes { padding: 28px 24px; height: 140px; }
   .who-inner { grid-template-columns: 1fr; gap: 56px; }
   .brain-svg { max-width: 360px; }
   .lede-row { grid-template-columns: 1fr; gap: 16px; }
@@ -1090,4 +1251,7 @@ footer .meta { font-size: 12px; color: var(--muted-cream); letter-spacing: 0.06e
   .where .grid { gap: 40px; }
   .hero .partner-badge { top: -20px; }
   .hero .partner-logo { height: 42px; }
+  .industry-grid { gap: 20px; }
+  .industry-card { flex: 1 1 100%; max-width: 100%; }
+  .industry-name { font-size: 15px; }
 }
