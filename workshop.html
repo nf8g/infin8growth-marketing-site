@@ -32,10 +32,63 @@
   .cornerstones-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center; }
   .details-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
   @media (max-width: 860px) {
-    .hero-grid, .cornerstones-grid { grid-template-columns: 1fr; }
-    .details-grid { grid-template-columns: 1fr 1fr; row-gap: 28px; }
-    h1 { font-size: 40px !important; }
+    .wrap { padding-left: 20px; padding-right: 20px; }
+    .hero-grid, .cornerstones-grid { grid-template-columns: 1fr; gap: 24px; }
+    .details-grid { grid-template-columns: 1fr 1fr; row-gap: 20px; }
+    h1 { font-size: 32px !important; }
+    /* Hide blueprint animation on mobile */
+    .hero-blueprint { display: none !important; }
+    /* Hide stacked blocks on mobile */
+    .cornerstone-blocks { display: none !important; }
+    /* Tighten stack items */
+    .stack-item { padding: 18px 16px; gap: 14px; }
+    .stack-num { width: 40px; height: 40px; font-size: 15px; }
+    /* Sticky CTA */
+    .sticky-cta {
+      display: block !important;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--deep-ocean);
+      border-top: 1px solid rgba(255,183,0,0.4);
+      padding: 12px 20px;
+      z-index: 100;
+    }
+    .sticky-cta a {
+      display: block;
+      background: var(--gold);
+      color: var(--deep-ocean);
+      text-align: center;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    /* Add bottom padding for sticky CTA */
+    body { padding-bottom: 70px; }
+    footer { padding-bottom: 80px; }
+    /* Reduce section padding on mobile */
+    .section-mobile-tight { padding-top: 48px !important; padding-bottom: 48px !important; }
+    .section-mobile-tighter { padding-top: 32px !important; padding-bottom: 32px !important; }
+    /* Stack cornerstones flex container */
+    .cornerstones-flex { flex-direction: column !important; gap: 24px !important; }
+    /* Tighter details grid */
+    .details-grid > div { padding: 0 16px !important; }
+    .details-grid > div:first-child { padding-left: 0 !important; }
+    /* Smaller header */
+    header img { height: 48px !important; }
+    /* Smaller h2 on mobile */
+    h2 { font-size: 28px !important; }
+    /* Tighter date pills */
+    .date-pill { padding: 8px 12px; font-size: 13px; }
+    /* Tighter hero copy */
+    .hero-grid p { font-size: 17px !important; }
+    .hero-grid > div:first-child { gap: 18px !important; padding-top: 12px !important; }
+    /* Reduce margins in cornerstones title */
+    .cornerstones-title { margin-bottom: 24px !important; }
   }
+  /* Hide sticky CTA on desktop */
+  .sticky-cta { display: none; }
   .date-pill { border: 1px solid rgba(74,155,142,0.7); background: rgba(74,155,142,0.12); padding: 10px 18px; font-size: 15px; }
   .stack-item { display: flex; align-items: flex-start; gap: 22px; padding: 26px 28px; border: 1px solid rgba(74,155,142,0.55); border-left: 5px solid var(--seafoam); background: rgba(74,155,142,0.09); }
   .stack-num { flex: none; width: 52px; height: 52px; display: grid; place-items: center; border: 1px solid var(--gold); font-size: 19px; color: var(--gold); font-weight: 700; }
@@ -77,7 +130,7 @@
     <div style="font-size: 13px; letter-spacing: 0.28em; color: var(--gold);">FREE LIVE WORKSHOP</div>
   </header>
 
-  <main class="wrap hero-grid" style="position: relative; padding-top: 40px; padding-bottom: 72px;">
+  <main class="wrap hero-grid section-mobile-tighter" style="position: relative; padding-top: 40px; padding-bottom: 72px;">
     <div style="display: flex; flex-direction: column; gap: 28px; padding-top: 24px;">
       <div style="height: 1px; background: rgba(255,183,0,0.55);"></div>
       <h1 style="margin: 0; font-size: 58px; line-height: 1.06; font-weight: 700; letter-spacing: -0.5px; text-wrap: pretty;">You don't need another AI tool.<br><span style="color: var(--gold);">You need a foundation.</span></h1>
@@ -89,7 +142,7 @@
         <div style="border: 1px solid rgba(255,255,255,0.22); padding: 10px 18px; font-size: 15px; color: rgba(255,255,255,0.75);">Online &middot; Free</div>
       </div>
 
-      <div style="position: relative; height: 260px; margin-top: 8px; pointer-events: none;" aria-hidden="true">
+      <div class="hero-blueprint" style="position: relative; height: 260px; margin-top: 8px; pointer-events: none;" aria-hidden="true">
         <svg viewBox="0 0 520 260" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible;" fill="none" stroke="#FFB700" stroke-width="1.1" stroke-linecap="square" vector-effect="non-scaling-stroke">
           <g opacity="0.2">
             <path d="M18 238 H502" stroke-dasharray="4 7"></path>
@@ -187,18 +240,18 @@
 </div>
 
 <section style="border-top: 1px solid rgba(255,183,0,0.35); background: var(--deep-ocean-dark);">
-  <div class="wrap" style="padding-top: 80px; padding-bottom: 80px;">
+  <div class="wrap section-mobile-tight" style="padding-top: 80px; padding-bottom: 80px;">
     <!-- Title row spanning full width -->
-    <div style="margin-bottom: 40px;">
+    <div class="cornerstones-title" style="margin-bottom: 40px;">
       <div style="font-size: 13px; letter-spacing: 0.28em; color: var(--gold); margin-bottom: 16px;">WHAT WE BUILD ON</div>
       <h2 style="margin: 0 0 16px; font-size: 40px; line-height: 1.1; font-weight: 700; letter-spacing: -0.3px;">3 Cornerstone Principles</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.8); max-width: 600px;">So much is possible with AI. Instead of trying to know it all right now, you'll understand 3 principles that jumpstart your confidence and level the playing field.</p>
     </div>
 
     <!-- Graphic + Cards side by side -->
-    <div style="display: flex; gap: 48px; align-items: center;">
+    <div class="cornerstones-flex" style="display: flex; gap: 48px; align-items: center;">
       <!-- Stacked-blocks illustration -->
-      <div style="flex: 0 0 340px;" aria-hidden="true">
+      <div class="cornerstone-blocks" style="flex: 0 0 340px;" aria-hidden="true">
         <svg viewBox="80 40 240 320" style="width: 100%; height: auto;">
           <g transform="translate(200,250)">
             <polygon points="0,-40 90,-5 0,30 -90,-5" fill="#5FB4A6" stroke="#FFB700" stroke-width="1.2"></polygon>
@@ -248,7 +301,7 @@
 </section>
 
 <section style="border-top: 1px solid rgba(255,183,0,0.35);">
-  <div class="wrap details-grid" style="padding-top: 64px; padding-bottom: 64px;">
+  <div class="wrap details-grid section-mobile-tighter" style="padding-top: 64px; padding-bottom: 64px;">
     <div style="display: flex; flex-direction: column; gap: 10px; padding-right: 28px;">
       <div style="font-size: 12px; letter-spacing: 0.2em; color: var(--gold);">COST</div>
       <div style="font-size: 30px; font-weight: 700; color: var(--gold);">Free</div>
@@ -269,7 +322,7 @@
 </section>
 
 <section style="border-top: 1px solid rgba(255,183,0,0.35); background: var(--deep-ocean-dark);">
-  <div class="wrap" style="padding-top: 72px; padding-bottom: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px;">
+  <div class="wrap section-mobile-tighter" style="padding-top: 72px; padding-bottom: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px;">
     <div style="display: flex; flex-direction: column; gap: 10px;">
       <div style="font-size: 34px; font-weight: 700; line-height: 1.1;">3 Simple Principles</div>
       <div style="font-size: 17px; color: rgba(255,255,255,0.78);">Less grinding, higher impact, more living.</div>
@@ -333,6 +386,11 @@
     });
   }
 </script>
+
+<!-- Sticky CTA for mobile -->
+<div class="sticky-cta">
+  <a href="#register">Save your spot</a>
+</div>
 
 </body>
 </html>
