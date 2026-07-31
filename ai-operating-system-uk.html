@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Operating System Installation for UK Businesses | Infin8 Growth</title>
+<meta name="description" content="AI Operating System installation for UK businesses in London, Cornwall, Manchester, Birmingham, and Edinburgh. Foundation Install in two weeks. Context, Connections, Workflows configured for your business.">
+<!-- Open Graph -->
+<meta property="og:title" content="AI Operating System Installation for UK Businesses | Infin8 Growth">
+<meta property="og:description" content="Foundation Install for UK businesses. Two weeks. Your context captured, tools connected, workflows running. Based in Cornwall, UK.">
+<meta property="og:image" content="/assets/og/home.png">
+<meta property="og:url" content="https://infin8growth.ai/ai-operating-system-uk.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://infin8growth.ai/ai-operating-system-uk.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YTS35YGLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8YTS35YGLZ');
+</script>
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Infin8 Growth",
+  "description": "AI Operating System installation for UK businesses. Foundation Install in two weeks: Context Layer, Connections Layer, Workflows Layer configured for your business.",
+  "url": "https://infin8growth.ai/ai-operating-system-uk.html",
+  "logo": "https://infin8growth.ai/assets/logo.png",
+  "email": "hello@infin8growth.ai",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cornwall",
+    "addressCountry": "GB"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Cornwall",
+      "containedIn": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "London",
+      "containedIn": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Manchester",
+      "containedIn": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Birmingham",
+      "containedIn": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Edinburgh",
+      "containedIn": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/infin8growth",
+    "https://www.youtube.com/@MarshallTuten8",
+    "https://www.instagram.com/infin8growth"
+  ],
+  "serviceType": [
+    "AI Operating System Implementation",
+    "AI Consulting",
+    "Business Automation",
+    "AI Integration Services",
+    "Workflow Automation"
+  ],
+  "priceRange": "££"
+}
+</script>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css?v=10">
+<link rel="stylesheet" href="css/upgrades.css?v=state2">
+<style>
+  /* Locations dropdown */
+  .has-dropdown {
+    position: relative;
+  }
+  .has-dropdown .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid rgba(14,40,64,0.1);
+    box-shadow: 0 4px 12px rgba(14,40,64,0.15);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 100;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+  }
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .has-dropdown .dropdown li {
+    margin: 0;
+  }
+  .has-dropdown .dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #0E2840;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.15s ease;
+  }
+  .has-dropdown .dropdown a:hover {
+    background: rgba(14,40,64,0.05);
+  }
+
+  /* Interactive Map Styles */
+  .map-interactive {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .map-interactive img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .city-marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FFB700;
+    border: 2px solid #0E2840;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 10;
+  }
+  .city-marker:hover, .city-marker.active {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 0 4px rgba(255,183,0,0.3);
+  }
+  .city-marker::after {
+    content: attr(data-label);
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0E2840;
+    color: #FFB700;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+  .city-marker:hover::after {
+    opacity: 1;
+  }
+  .location-tooltip {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(255,183,0,0.1);
+    border-left: 3px solid #FFB700;
+  }
+  .location-tooltip h3 {
+    margin: 0 0 12px 0;
+    color: #FFB700;
+    font-size: 20px;
+  }
+  .location-tooltip p {
+    margin: 0;
+    color: #E8E4DC;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="top">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li class="has-dropdown">
+          <a href="#" onclick="return false;">Locations</a>
+          <ul class="dropdown">
+            <li><a href="ai-operating-system-connecticut.html">Connecticut</a></li>
+            <li><a href="ai-operating-system-california.html">California</a></li>
+            <li><a href="ai-operating-system-uk.html">United Kingdom</a></li>
+          </ul>
+        </li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="about.html" onclick="closeDrawer()">About</a></li>
+    <li><a href="work.html" onclick="closeDrawer()">Work</a></li>
+    <li><a href="pricing.html" onclick="closeDrawer()">Pricing</a></li>
+    <li><a href="ai-operating-system-connecticut.html" onclick="closeDrawer()">Connecticut</a></li>
+    <li><a href="ai-operating-system-california.html" onclick="closeDrawer()">California</a></li>
+    <li><a href="ai-operating-system-uk.html" onclick="closeDrawer()">United Kingdom</a></li>
+    <li><a href="field-notes.html" onclick="closeDrawer()">Field Notes</a></li>
+    <li><a href="faq.html" onclick="closeDrawer()">FAQ</a></li>
+    <li><a href="index.html#contact" onclick="closeDrawer()">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="cream hero" id="top">
+  <div class="hero-aura" aria-hidden="true"></div>
+  <div class="container">
+    <span class="eyebrow">AI Operating Systems · United Kingdom</span>
+    <h1><span class="gold-accent">AI Operating System Installation</span><br>for UK Businesses</h1>
+    <p class="lead">Foundation Install in two weeks. Your context captured, your tools connected, your workflows running. Serving businesses in <strong>Cornwall, London, Manchester, Birmingham, and Edinburgh</strong>.</p>
+
+    <div class="cta-block">
+      <a href="https://calendly.com/marshall-tuten/foundation-assessment" class="btn btn-primary" target="_blank" rel="noopener">Book a Foundation Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY UK BUSINESSES CHOOSE INFIN8 ============ -->
+<section class="navy">
+  <div class="container narrow">
+    <h2>Why UK Businesses Choose Infin8</h2>
+    <p class="lead">The UK's economy runs on institutional knowledge. Whether you're managing a heritage site in Cornwall, running a professional services firm in London, operating an established business in Birmingham, or stewarding an estate that's been in the family for generations, your business depends on knowledge that's difficult to document, harder to transfer, and presents challenges to scale. AI changes what's possible.</p>
+
+    <p style="margin-top: 32px; margin-bottom: 16px;"><strong>We work with knowledge-based businesses across the UK:</strong></p>
+
+    <div class="location-map-container" style="margin-top: 48px; margin-bottom: 48px;">
+      <div class="map-interactive">
+        <img src="assets/maps/UKSilhouette.svg" alt="Map of United Kingdom">
+        <!-- City markers positioned on UK map (England only) -->
+        <div class="city-marker" data-city="cornwall" data-label="Cornwall" style="top: 96%; left: 19%;"></div>
+        <div class="city-marker" data-city="birmingham" data-label="Birmingham" style="top: 75%; left: 61%;"></div>
+        <div class="city-marker" data-city="manchester" data-label="Manchester" style="top: 65%; left: 58%;"></div>
+        <div class="city-marker" data-city="london" data-label="London" style="top: 90%; left: 75%;"></div>
+      </div>
+      <div class="location-tooltip" id="ukTooltip" style="display: none;">
+        <h3 id="ukTooltipCity"></h3>
+        <p id="ukTooltipDesc"></p>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; padding: 24px; background: rgba(255,183,0,0.1); border-left: 3px solid #FFB700;">
+      <p style="margin: 0; margin-bottom: 16px; color: #E8E4DC;"><strong style="color: #FFB700;">UK-Specific Context:</strong> Based in Cornwall, we're embedded in the UK business landscape. We understand the difference between how a London firm evaluates vendors versus how a Cornwall estate makes decisions. We know heritage sector challenges intimately: our embedded Partner work at <strong>St Michael's Mount</strong> demonstrates what full AI OS delivery looks like for visitor attractions and heritage operations.</p>
+      <p style="margin: 0; color: #E8E4DC;">The Foundation Install is the same whether you're in Penzance or Piccadilly. Your context, your regulatory environment, and your operational workflows are what make it yours. UK businesses value systems that preserve institutional knowledge, operate transparently, and compound over time. That's exactly what we build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE OPERATING SYSTEM ============ -->
+
+<section class="cream what" id="what">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <span class="eyebrow">The Operating System</span>
+        <h2>Three <em>layers</em></h2>
+      </div>
+      <div class="right">
+        <p>Each one makes the next one possible.</p>
+      </div>
+    </div>
+
+    <div class="layers" id="layers">
+      <div class="layers-rail" role="tablist" aria-label="Operating system layers">
+        <button class="layer-tab is-active" role="tab" aria-selected="true" data-layer="0">
+          <span class="tab-num">01</span>
+          <span class="tab-label">Your <em>knowledge</em></span>
+          <span class="tab-marker"></span>
+        </button>
+        <button class="layer-tab" role="tab" aria-selected="false" data-layer="1">
+          <span class="tab-num">02</span>
+          <span class="tab-label">Your <em>connections</em></span>
+          <span class="tab-marker"></span>
+        </button>
+        <button class="layer-tab" role="tab" aria-selected="false" data-layer="2">
+          <span class="tab-num">03</span>
+          <span class="tab-label">Your <em>workflows</em></span>
+          <span class="tab-marker"></span>
+        </button>
+      </div>
+
+      <div>
+        <div class="layers-panel">
+          <article class="layer-slide is-active" data-layer="0" role="tabpanel">
+            <div class="slide-copy">
+              <span class="slide-num">Layer 01 · Your Knowledge</span>
+              <h3>Your <em>knowledge</em></h3>
+              <p class="lead">How your business actually works today.</p>
+              <ul class="slide-bullets">
+                <li>Processes, procedures &amp; decisions</li>
+                <li>Client histories &amp; strategy</li>
+                <li>Who does what, and why</li>
+                <li>Plans for where you're going next</li>
+              </ul>
+              <p class="slide-close">Ask questions in plain English. Get answers from your own records.</p>
+            </div>
+            <div class="slide-visual">
+              <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+                <circle cx="100" cy="100" r="70" class="stroke-navy" stroke-dasharray="3 5"/>
+                <circle cx="100" cy="100" r="28" class="fill-gold"/>
+                <circle cx="100" cy="100" r="10" class="fill-navy"/>
+                <circle cx="30"  cy="100" r="8" class="fill-navy"/>
+                <circle cx="170" cy="100" r="8" class="fill-navy"/>
+                <circle cx="100" cy="30"  r="8" class="fill-navy"/>
+                <circle cx="100" cy="170" r="8" class="fill-navy"/>
+                <line x1="38"  y1="100" x2="72"  y2="100" class="stroke-gold"/>
+                <line x1="128" y1="100" x2="162" y2="100" class="stroke-gold"/>
+                <line x1="100" y1="38"  x2="100" y2="72"  class="stroke-gold"/>
+                <line x1="100" y1="128" x2="100" y2="162" class="stroke-gold"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="layer-slide" data-layer="1" role="tabpanel">
+            <div class="slide-copy">
+              <span class="slide-num">Layer 02 · Connected Platform</span>
+              <h3>Your <em>connections</em></h3>
+              <p class="lead">One platform connected to everything your team already uses.</p>
+              <ul class="slide-bullets">
+                <li>Email &amp; calendars</li>
+                <li>Documents &amp; spreadsheets</li>
+                <li>Finance tools &amp; CRM</li>
+                <li>Meeting notes &amp; tasks</li>
+              </ul>
+              <p class="slide-close">Less shuffling between systems, more execution.</p>
+            </div>
+            <div class="slide-visual">
+              <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+                <circle cx="100" cy="100" r="22" class="fill-gold"/>
+                <rect x="20"  y="24"  width="44" height="28" rx="3" class="stroke-navy"/>
+                <rect x="136" y="24"  width="44" height="28" rx="3" class="stroke-navy"/>
+                <rect x="20"  y="148" width="44" height="28" rx="3" class="stroke-navy"/>
+                <rect x="136" y="148" width="44" height="28" rx="3" class="stroke-navy"/>
+                <line x1="64"  y1="38"  x2="82"  y2="88"  class="stroke-gold"/>
+                <line x1="136" y1="38"  x2="118" y2="88"  class="stroke-gold"/>
+                <line x1="64"  y1="162" x2="82"  y2="112" class="stroke-gold"/>
+                <line x1="136" y1="162" x2="118" y2="112" class="stroke-gold"/>
+                <circle cx="100" cy="100" r="8" class="fill-navy"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="layer-slide" data-layer="2" role="tabpanel">
+            <div class="slide-copy">
+              <span class="slide-num">Layer 03 · Intelligent Systems</span>
+              <h3>Your <em>workflows</em></h3>
+              <p class="lead">Intelligent systems that produce real results, built on what you already know.</p>
+              <ul class="slide-bullets">
+                <li>Enquiry triage that routes itself</li>
+                <li>Reports that write from your data</li>
+                <li>Meeting tasks captured automatically</li>
+              </ul>
+              <p class="slide-close">Each one built on your knowledge and connections.</p>
+            </div>
+            <div class="slide-visual">
+              <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+                <path d="M 30 100 Q 65 40, 100 100 T 170 100" class="stroke-gold" stroke-width="2"/>
+                <circle cx="30"  cy="100" r="10" class="fill-navy"/>
+                <circle cx="100" cy="100" r="14" class="fill-gold"/>
+                <circle cx="170" cy="100" r="10" class="fill-navy"/>
+                <rect x="50"  y="135" width="30" height="6" rx="1" class="fill-navy" opacity="0.4"/>
+                <rect x="85"  y="135" width="48" height="6" rx="1" class="fill-navy" opacity="0.55"/>
+                <rect x="138" y="135" width="20" height="6" rx="1" class="fill-navy" opacity="0.7"/>
+                <rect x="50"  y="148" width="108" height="2" rx="1" class="fill-gold"/>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <div class="layers-progress" aria-hidden="true">
+          <button class="dot is-active" data-layer="0"></button>
+          <button class="dot" data-layer="1"></button>
+          <button class="dot" data-layer="2"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cream">
+  <div class="container narrow center">
+    <h2>Ready to Install Your AI Operating System?</h2>
+    <p class="lead">Book a 30-minute Foundation Assessment. We'll tell you if the Install is a fit for your UK business.</p>
+    <a href="https://calendly.com/marshall-tuten/foundation-assessment" class="btn btn-primary" target="_blank" rel="noopener">Book Your Foundation Assessment</a>
+    <p style="margin-top: 24px; opacity: 0.7;">Or email us at <a href="mailto:hello@infin8growth.ai" style="color: inherit; text-decoration: underline;">hello@infin8growth.ai</a></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <a href="index.html" class="wordmark">I N F I N 8 &nbsp;&nbsp; G R O W T H</a>
+    <nav class="bottom">
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/@MarshallTuten8" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/company/infin8growth" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/infin8growth" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <span class="meta">MIDDLETOWN, CT · OCEANSIDE, CA · CORNWALL, UK</span>
+    <span class="meta" style="margin-top: 8px;"><a href="/privacy.html" style="color: inherit; opacity: 0.6; text-decoration: none;">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  (function(){
+    var ham = document.getElementById('hamburger');
+    var drawer = document.getElementById('navDrawer');
+    if (!ham || !drawer) return;
+    ham.addEventListener('click', function(){
+      var open = drawer.classList.toggle('open');
+      ham.classList.toggle('open', open);
+      ham.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    window.closeDrawer = function(){
+      drawer.classList.remove('open');
+      ham.classList.remove('open');
+      ham.setAttribute('aria-label', 'Open menu');
+      document.body.style.overflow = '';
+    };
+  })();
+
+  // ===== Three Layers stepper =====
+  (function(){
+    var tabs = document.querySelectorAll('.layer-tab');
+    var slides = document.querySelectorAll('.layer-slide');
+    var dots = document.querySelectorAll('.layers-progress .dot');
+    function set(i){
+      tabs.forEach(function(t,idx){ t.classList.toggle('is-active', idx===i); t.setAttribute('aria-selected', idx===i); });
+      slides.forEach(function(s,idx){ s.classList.toggle('is-active', idx===i); });
+      dots.forEach(function(d,idx){ d.classList.toggle('is-active', idx===i); });
+    }
+    tabs.forEach(function(t,i){
+      t.addEventListener('click', function(){ set(i); });
+      t.addEventListener('mouseenter', function(){ set(i); });
+    });
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ set(i); }); });
+  })();
+
+  // ===== UK Map Interactions =====
+  (function(){
+    var cityData = {
+      cornwall: {
+        name: 'Cornwall & South West',
+        desc: 'Heritage sites, visitor attractions, estates, specialist museums, and tourism operations managing preservation, visitor experience, and operational complexity unique to heritage-focused businesses'
+      },
+      london: {
+        name: 'London',
+        desc: 'Professional services, creative agencies, consultancies, and established firms managing client complexity and institutional knowledge at scale'
+      },
+      manchester: {
+        name: 'Manchester',
+        desc: 'Creative industries, professional services, and established businesses balancing innovation with operational stability in competitive markets'
+      },
+      birmingham: {
+        name: 'Birmingham',
+        desc: 'Established businesses, professional services, and operations digitising decades of operational knowledge and supplier relationships'
+      }
+    };
+
+    var markers = document.querySelectorAll('.city-marker');
+    var tooltip = document.getElementById('ukTooltip');
+    var tooltipCity = document.getElementById('ukTooltipCity');
+    var tooltipDesc = document.getElementById('ukTooltipDesc');
+
+    markers.forEach(function(marker){
+      var city = marker.getAttribute('data-city');
+      marker.addEventListener('mouseenter', function(){
+        var data = cityData[city];
+        if (data) {
+          tooltipCity.textContent = data.name;
+          tooltipDesc.textContent = data.desc;
+          tooltip.style.display = 'block';
+        }
+      });
+      marker.addEventListener('click', function(){
+        var data = cityData[city];
+        if (data) {
+          tooltipCity.textContent = data.name;
+          tooltipDesc.textContent = data.desc;
+          tooltip.style.display = 'block';
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
