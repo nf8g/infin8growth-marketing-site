@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "issue": 7,
+      "slug": "learning-ai-at-work-reveals-how-you-work",
+      "title": "How Learning to Use AI at Work Reveals How You <em>Actually</em> Do Your Job",
+      "dek": "AI disappointment usually isn't an AI problem. It's a mirror. The real skill is teaching AI how you work.",
+      "date": "July 2026"
+    },
+    {
+      "issue": 6,
+      "slug": "your-ai-champion-probably-wont-be-techy",
+      "title": "Your AI Champion Probably Won't Be <em>\"Techy\"</em>",
+      "dek": "The technical are held back by previous experience. Everyone else is empowered by an open frontier.",
+      "date": "July 2026"
+    },
+    {
+      "issue": 5,
+      "slug": "the-liability-of-digital-fluency",
+      "title": "The Liability of <em>Digital Fluency</em>",
+      "dek": "You may be strategically ready for AI, but what about practically? Digital fluency is often the hidden barrier.",
+      "date": "June 2026"
+    },
+    {
+      "issue": 4,
+      "slug": "results-require-foundation",
+      "title": "<em>Results Require</em> Foundation",
+      "dek": "There is a massive chasm between AI hype and real results. The difference isn't tools.",
+      "date": "June 2026"
+    },
+    {
+      "issue": 3,
+      "slug": "the-1-reason-ai-isnt-working",
+      "title": "<em>The #1 Reason</em> AI Isn't Working",
+      "dek": "Tools and prompting can only take you so far. The real challenge starts with you.",
+      "date": "June 2026"
+    },
+    {
+      "issue": 2,
+      "slug": "youre-already-paying-for-ai",
+      "title": "<em>You're Already Paying</em> for AI",
+      "dek": "Chaos has a price tag. Your business is already spending on time, money, attention, and energy. Here's what it's costing you.",
+      "date": "May 2026"
+    },
+    {
+      "issue": 1,
+      "slug": "people-first-ai-adoption",
+      "title": "<em>People-First</em> AI Adoption",
+      "dek": "What we've learned about change management from embedding AI in a 400,000-visitor heritage attraction.",
+      "date": "May 2026"
+    },
+    {
+      "issue": 8,
+      "slug": "find-your-business-edge-with-ai",
+      "title": "How to Find Your Business's Edge with AI",
+      "dek": "The best advice you're getting about AI might be technically correct and completely wrong for you.",
+      "date": "August 2026"
+    }
+  ]
+}
