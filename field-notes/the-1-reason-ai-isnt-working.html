@@ -106,6 +106,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/upgrades.css">
 </head>
 <body>
 
@@ -142,6 +143,14 @@
     <a href="https://calendly.com/marshall-tuten/review-call" class="btn">Start with a Foundation Assessment <span class="arrow">→</span></a>
   </div>
 </nav>
+<!-- Progress Indicator -->
+<div class="article-progress" id="articleProgress">
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+    <div class="progress-dots" id="progressDots"></div>
+  </div>
+</div>
+
 
 <!-- ============ POST HEADER ============ -->
 <section class="cream post-header">
@@ -270,6 +279,55 @@
     drawer.classList.remove('open');
     document.body.style.overflow = '';
   }
+</script>
+
+
+<script>
+// Progress indicator
+(function() {
+  const article = document.querySelector('.post-body') || document.getElementById('articleContent');
+  const progressFill = document.getElementById('progressFill');
+  const progressDots = document.getElementById('progressDots');
+
+  if (!article || !progressFill || !progressDots) return;
+
+  // Find all h2 sections
+  const sections = article.querySelectorAll('h2');
+  const numDots = Math.max(sections.length, 5);
+
+  // Create dots
+  for (let i = 0; i < numDots; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'progress-dot';
+    progressDots.appendChild(dot);
+  }
+
+  const dots = progressDots.querySelectorAll('.progress-dot');
+
+  function updateProgress() {
+    const articleRect = article.getBoundingClientRect();
+    const articleTop = window.scrollY + articleRect.top;
+    const articleHeight = article.offsetHeight;
+    const scrollPos = window.scrollY - articleTop + window.innerHeight * 0.3;
+
+    // Calculate progress percentage
+    const progress = Math.min(Math.max(scrollPos / articleHeight * 100, 0), 100);
+    progressFill.style.height = progress + '%';
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      const dotThreshold = (index / (numDots - 1)) * 100;
+      if (progress >= dotThreshold) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();
 </script>
 
 </body>
