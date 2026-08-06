@@ -11,7 +11,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="{{TITLE}} | Field Notes">
 <meta property="og:description" content="{{META_DESCRIPTION}}">
-<meta property="og:image" content="/assets/og/field-notes.png">
+<meta property="og:image" content="{{OG_IMAGE}}">
 <meta property="og:url" content="https://infin8growth.ai/field-notes/{{SLUG}}.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
@@ -93,8 +93,16 @@
   </div>
 </header>
 
+<!-- Progress Indicator -->
+<div class="article-progress" id="articleProgress">
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+    <div class="progress-dots" id="progressDots"></div>
+  </div>
+</div>
+
 <!-- ARTICLE -->
-<article class="field-note">
+<article class="field-note" id="articleContent">
   <div class="container">
 
     <!-- Article Header -->
@@ -104,8 +112,18 @@
         <span class="article-date">{{DATE_DISPLAY}}</span>
       </p>
       <h1>{{TITLE}}</h1>
+      {{#SUBTITLE}}
+      <p class="article-subtitle">{{SUBTITLE}}</p>
+      {{/SUBTITLE}}
       <p class="article-byline">By Marshall Tuten</p>
     </header>
+
+    <!-- Header Image (optional) -->
+    {{#HEADER_IMAGE}}
+    <figure class="article-hero-image">
+      <img src="/field-notes/_images/{{HEADER_IMAGE}}" alt="{{HEADER_IMAGE_ALT}}" />
+    </figure>
+    {{/HEADER_IMAGE}}
 
     <!-- Article Content -->
     <div class="article-content">
@@ -116,13 +134,14 @@
 
     <!-- CTA Section -->
     <section class="article-cta">
-      <h2>Want the full version?</h2>
-      <p>This is the website edition. For the complete Field Notes with deeper context and examples, subscribe on Substack.</p>
-      <div class="cta-buttons">
-        <a href="{{SUBSTACK_POST_URL}}" class="btn btn-primary">Read Full Post on Substack →</a>
-        <a href="https://infin8growth.substack.com/subscribe" class="btn btn-secondary">Subscribe to Field Notes</a>
-      </div>
-      <p class="cta-note">Free, weekly. No spam. Unsubscribe anytime.</p>
+      <h2>Get Field Notes in your inbox</h2>
+      <p>One issue a week. Free, always.</p>
+      <form class="subscribe-inline" action="/api/newsletter/subscribe" method="POST">
+        <input type="text" name="firstName" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" required />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="cta-note">No spam. Unsubscribe anytime.</p>
     </section>
 
     <!-- Related Content -->
@@ -145,6 +164,54 @@
     <p><a href="/privacy.html">Privacy Policy</a></p>
   </div>
 </footer>
+
+<script>
+// Progress indicator
+(function() {
+  const article = document.getElementById('articleContent');
+  const progressFill = document.getElementById('progressFill');
+  const progressDots = document.getElementById('progressDots');
+
+  if (!article || !progressFill || !progressDots) return;
+
+  // Find all h2 sections
+  const sections = article.querySelectorAll('h2');
+  const numDots = Math.max(sections.length, 5);
+
+  // Create dots
+  for (let i = 0; i < numDots; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'progress-dot';
+    progressDots.appendChild(dot);
+  }
+
+  const dots = progressDots.querySelectorAll('.progress-dot');
+
+  function updateProgress() {
+    const articleRect = article.getBoundingClientRect();
+    const articleTop = window.scrollY + articleRect.top;
+    const articleHeight = article.offsetHeight;
+    const scrollPos = window.scrollY - articleTop + window.innerHeight * 0.3;
+
+    // Calculate progress percentage
+    const progress = Math.min(Math.max(scrollPos / articleHeight * 100, 0), 100);
+    progressFill.style.height = progress + '%';
+
+    // Update dots
+    dots.forEach((dot, index) => {
+      const dotThreshold = (index / (numDots - 1)) * 100;
+      if (progress >= dotThreshold) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();
+</script>
 
 </body>
 </html>

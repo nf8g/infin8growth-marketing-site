@@ -1098,3 +1098,238 @@
   .faq-cta { padding: 40px 28px; flex-direction: column; align-items: flex-start; }
   .faq-q { gap: 18px; padding: 24px 0; }
 }
+
+/* ── FIELD NOTES: Pull Quotes ─────────────────────────── */
+.article-content blockquote.pull-quote {
+  margin: 48px 0;
+  padding: 32px 40px;
+  border-left: 3px solid var(--gold);
+  background: var(--gold-faint);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.45;
+  color: var(--navy);
+}
+.article-content blockquote.pull-quote p {
+  margin: 0;
+}
+
+/* ── FIELD NOTES: Callout Boxes ───────────────────────── */
+.callout-box {
+  margin: 32px 0;
+  padding: 24px 28px;
+  background: rgba(74, 155, 142, 0.08);
+  border: 1px solid var(--seafoam);
+  border-radius: 4px;
+}
+.callout-box .callout-title {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--seafoam);
+  margin: 0 0 12px;
+}
+.callout-box p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── FIELD NOTES: Header Image ────────────────────────── */
+.article-hero-image {
+  margin: 0 0 40px;
+  width: 100%;
+}
+.article-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ── FIELD NOTES: Inline Images ───────────────────────── */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 32px 0;
+}
+.article-content figure {
+  margin: 32px 0;
+}
+.article-content figcaption {
+  font-size: 13px;
+  color: var(--muted-navy);
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ── FIELD NOTES: Inline Subscribe Form ───────────────── */
+.subscribe-inline {
+  display: flex;
+  gap: 12px;
+  max-width: 520px;
+  margin: 24px 0;
+}
+.subscribe-inline input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid rgba(14, 40, 64, 0.2);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(--sans);
+}
+.subscribe-inline input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.subscribe-inline button {
+  white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .subscribe-inline {
+    flex-direction: column;
+  }
+  .subscribe-inline input,
+  .subscribe-inline button {
+    width: 100%;
+  }
+}
+
+/* ── FIELD NOTES: Article Layout ──────────────────────── */
+.article-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.article-hero-image {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-cta {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-related {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── FIELD NOTES: Scroll Progress Indicator ───────────── */
+.article-progress {
+  position: fixed;
+  left: 32px;
+  top: 180px;
+  width: 12px;
+  height: calc(100vh - 280px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.progress-track {
+  position: relative;
+  width: 3px;
+  flex: 1;
+  background: transparent;
+  border-radius: 2px;
+  overflow: visible;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--gold, #a88242);
+  border-radius: 2px;
+  transition: height 50ms ease-out;
+}
+
+.progress-dots {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.progress-dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(14, 40, 64, 0.12);
+  border-radius: 50%;
+  margin-left: -1.5px;
+  transition: background 200ms ease;
+}
+
+.progress-dot.active {
+  background: var(--gold, #a88242);
+}
+
+/* Hide progress indicator on smaller screens */
+@media (max-width: 900px) {
+  .article-progress {
+    display: none;
+  }
+}
+
+/* ── FIELD NOTES: Article Header Styling ──────────────── */
+.article-header {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.article-header h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.article-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.45;
+  color: var(--navy);
+  opacity: 0.8;
+  margin: 0 0 20px;
+  max-width: 600px;
+}
+
+.article-byline {
+  font-size: 15px;
+  color: var(--navy);
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* Subscribe form on dark background (fn-subscribe section) */
+.fn-subscribe .subscribe-inline {
+  max-width: 100%;
+}
+.fn-subscribe .subscribe-inline input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--light-text, #e8e4dc);
+}
+.fn-subscribe .subscribe-inline input::placeholder {
+  color: rgba(232, 228, 220, 0.5);
+}
+.fn-subscribe .subscribe-inline input:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.15);
+}
