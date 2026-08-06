@@ -1,6 +1,6 @@
 /**
  * update-listing.js
- * Updates field-notes.html listing page from the manifest file.
+ * Updates field-notes.html listing page AND homepage archive section from the manifest file.
  *
  * Usage: node scripts/update-listing.js
  */
@@ -10,6 +10,10 @@ const path = require('path');
 
 const MANIFEST_PATH = path.join(__dirname, '../field-notes/_manifest.json');
 const LISTING_PATH = path.join(__dirname, '../field-notes.html');
+const HOMEPAGE_PATH = path.join(__dirname, '../index.html');
+
+// How many issues to show on the homepage
+const HOMEPAGE_ISSUE_COUNT = 4;
 
 /**
  * Generate HTML for a single list item
@@ -34,6 +38,65 @@ function generateListHtml(posts) {
   // Sort by issue number descending (newest first)
   const sorted = [...posts].sort((a, b) => b.issue - a.issue);
   return sorted.map(generateListItem).join('\n');
+}
+
+/**
+ * Generate HTML for a single homepage archive row
+ */
+function generateHomepageRow(post) {
+  const numPadded = String(post.issue).padStart(2, '0');
+
+  return `      <a href="field-notes/${post.slug}.html" class="row row--live">
+        <span class="num">${numPadded}</span>
+        <span>
+          <span class="title">${post.title}</span>
+          <span class="dek">${post.dek}</span>
+        </span>
+        <span class="date"><span class="dot dot--live"></span>${post.date}</span>
+      </a>`;
+}
+
+/**
+ * Generate homepage archive HTML (limited to HOMEPAGE_ISSUE_COUNT)
+ */
+function generateHomepageArchiveHtml(posts) {
+  // Sort by issue number descending (newest first) and take top N
+  const sorted = [...posts].sort((a, b) => b.issue - a.issue);
+  const topPosts = sorted.slice(0, HOMEPAGE_ISSUE_COUNT);
+  return topPosts.map(generateHomepageRow).join('\n');
+}
+
+/**
+ * Update the homepage archive section
+ */
+function updateHomepage(posts) {
+  if (!fs.existsSync(HOMEPAGE_PATH)) {
+    console.log('Homepage not found, skipping homepage update');
+    return false;
+  }
+
+  let html = fs.readFileSync(HOMEPAGE_PATH, 'utf8');
+
+  // Generate new archive HTML
+  const archiveHtml = generateHomepageArchiveHtml(posts);
+
+  // Replace the archive content between <div class="archive"> and </div>
+  // The archive div is inside the Field Notes section
+  const archiveRegex = /(<div class="archive">)([\s\S]*?)(<\/div>\s*<div class="subscribe-block">)/;
+  const archiveMatch = html.match(archiveRegex);
+
+  if (!archiveMatch) {
+    console.log('Could not find archive section in index.html, skipping');
+    return false;
+  }
+
+  html = html.replace(archiveRegex, `$1\n${archiveHtml}\n    $3`);
+
+  // Write updated homepage
+  fs.writeFileSync(HOMEPAGE_PATH, html);
+
+  console.log(`Updated index.html with ${HOMEPAGE_ISSUE_COUNT} most recent posts`);
+  return true;
 }
 
 /**
@@ -72,6 +135,10 @@ function updateListing() {
   fs.writeFileSync(LISTING_PATH, html);
 
   console.log(`Updated field-notes.html with ${posts.length} posts`);
+
+  // Also update homepage archive section
+  updateHomepage(posts);
+
   return posts.length;
 }
 
