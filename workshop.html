@@ -136,9 +136,9 @@
       <h1 style="margin: 0; font-size: 58px; line-height: 1.06; font-weight: 700; letter-spacing: -0.5px; text-wrap: pretty;">You don't need another AI tool.<br><span style="color: var(--gold);">You need a foundation.</span></h1>
       <p style="margin: 0; font-size: 21px; line-height: 1.5; color: rgba(255,255,255,0.82); max-width: 34em; text-wrap: pretty;">Stuck in <span style="color: var(--gold);">the grind?</span> Know you can be <span style="color: var(--gold);">more effective?</span> Ready to do <span style="color: var(--gold);">more living than working?</span> Join us for one hour to explore what's possible when you decide to <span style="color: var(--gold);">make AI an asset</span>, not another to-do.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-        <div class="date-pill">Saturday, Aug 29</div>
+        <div class="date-pill">Saturday, Sep 12</div>
         <div style="display: flex; align-items: center; font-size: 15px; color: rgba(255,255,255,0.7);">or</div>
-        <div class="date-pill">Tuesday, Sep 1</div>
+        <div class="date-pill">Monday, Sep 14</div>
         <div style="border: 1px solid rgba(255,255,255,0.22); padding: 10px 18px; font-size: 15px; color: rgba(255,255,255,0.75);">Online &middot; Free</div>
       </div>
 
@@ -217,14 +217,15 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
             <button type="button" class="date-btn" data-date="a" onclick="selectDate('a')">
               <span style="font-size: 12px; letter-spacing: 0.14em; opacity: 0.72;">SATURDAY</span>
-              <span style="font-size: 19px; font-weight: 700;">Aug 29</span>
+              <span style="font-size: 19px; font-weight: 700;">Sep 12</span>
+              <span style="font-size: 12px; opacity: 0.72;">1:00 PM EST</span>
             </button>
             <button type="button" class="date-btn" data-date="b" onclick="selectDate('b')">
-              <span style="font-size: 12px; letter-spacing: 0.14em; opacity: 0.72;">TUESDAY</span>
-              <span style="font-size: 19px; font-weight: 700;">Sep 1</span>
+              <span style="font-size: 12px; letter-spacing: 0.14em; opacity: 0.72;">MONDAY</span>
+              <span style="font-size: 19px; font-weight: 700;">Sep 14</span>
+              <span style="font-size: 12px; opacity: 0.72;">12:00 PM EST</span>
             </button>
           </div>
-          <div style="font-size: 13px; color: rgba(14,40,64,0.6);">Times announced at registration.</div>
         </div>
         <button type="button" class="submit-btn" onclick="submitRegistration()">Save my spot</button>
         <div style="font-size: 13px; line-height: 1.5; color: rgba(14,40,64,0.6);">This Workshop is Free</div>
@@ -308,15 +309,15 @@
     </div>
     <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 28px; border-left: 1px solid rgba(255,255,255,0.18);">
       <div style="font-size: 12px; letter-spacing: 0.2em; color: var(--gold);">PICK ONE DATE</div>
-      <div style="font-size: 19px; line-height: 1.35;">Sat, Aug 29<br>or Tue, Sep 1</div>
+      <div style="font-size: 19px; line-height: 1.35;">Sat, Sep 12<br>or Mon, Sep 14</div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 28px; border-left: 1px solid rgba(255,255,255,0.18);">
       <div style="font-size: 12px; letter-spacing: 0.2em; color: var(--gold);">WHERE</div>
-      <div style="font-size: 19px;">Online</div>
+      <div style="font-size: 19px;">Online (Zoom)</div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 10px; padding-left: 28px; border-left: 1px solid rgba(255,255,255,0.18);">
       <div style="font-size: 12px; letter-spacing: 0.2em; color: var(--gold);">TIMES</div>
-      <div style="font-size: 19px; line-height: 1.35;">Announced at registration</div>
+      <div style="font-size: 17px; line-height: 1.35;">Sep 12: 1 PM EST / 10 AM PST<br>Sep 14: 12 PM EST / 9 AM PST</div>
     </div>
   </div>
 </section>
@@ -363,7 +364,7 @@
       return;
     }
 
-    var dateLabel = selectedDate === 'a' ? 'Saturday, Aug 29' : 'Tuesday, Sep 1';
+    var dateLabel = selectedDate === 'a' ? 'Saturday, Sep 12' : 'Monday, Sep 14';
     var submitBtn = document.querySelector('.submit-btn');
     submitBtn.textContent = 'Saving...';
     submitBtn.disabled = true;
